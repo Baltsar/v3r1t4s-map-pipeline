@@ -15,9 +15,10 @@
   },
   "counts": {
     "total": 17,
-    "new": 0,
-    "ambiguous": 0,
-    "rejected": 0
+    "ambiguous": 1,
+    "last_batch": "06",
+    "last_batch_new": 0,
+    "last_batch_rejected": 0
   },
   "candidates": [
     {
@@ -2334,7 +2335,7 @@
     }
   ],
   "qc": {
-    "run_at": "2026-10-26T22:07:00.726Z",
+    "run_at": "2026-10-26T22:08:29.895Z",
     "reviewer": "deterministic",
     "passed": true,
     "checked": 17,

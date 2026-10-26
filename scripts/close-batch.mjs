@@ -160,9 +160,10 @@ const nyFil = {
   },
   counts: {
     total: (dagensFil.candidates?.length ?? 0) + godkanda.length,
-    new: godkanda.length,
-    ambiguous: godkanda.filter((c) => c.dedupe?.verdict === 'ambiguous').length,
-    rejected: avvisade.length,
+    ambiguous: [...(dagensFil.candidates ?? []), ...godkanda].filter((c) => c.dedupe?.verdict === 'ambiguous').length,
+    last_batch: batch.batch,
+    last_batch_new: godkanda.length,
+    last_batch_rejected: avvisade.length,
   },
   candidates: [...(dagensFil.candidates ?? []), ...godkanda],
 };

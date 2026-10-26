@@ -1,6 +1,6 @@
 # Kandidater 2026-10-26
 
-Genererad av v3r1t4s-map-pipeline 2026-10-26T22:07:08.716Z.
+Genererad av v3r1t4s-map-pipeline 2026-10-26T22:08:37.209Z.
 
 Kandidater, inte intag. En post här är verifierad mot sin källa men inte
 granskad av en människa. Ingenting skrivs in i `opensverige-ai-infra` eller

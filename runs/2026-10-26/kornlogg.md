@@ -69,3 +69,4 @@ Genererad av v3r1t4s-map-pipeline. En rad per händelse, i tidsordning.
 | 2026-10-26T22:04:54.442Z | stopp | Sessionen tog slut efter 6 batchar. Inget automatiskt stoppvillkor var uppfyllt: 17 kandidater av 100, 0,2 h av 6 h, och bara MCP-familjen har en tom körning i rad. Sökandet är inte uttömt — de fem discovery-familjerna hade mer kvar. |
 | 2026-10-26T22:06:22.528Z | qc underkänd | 1 av 17: binero |
 | 2026-10-26T22:07:00.729Z | qc godkänd | 17 poster |
+| 2026-10-26T22:08:29.899Z | qc godkänd | 17 poster |
