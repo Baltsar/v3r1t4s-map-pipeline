@@ -1,0 +1,44 @@
+{
+  "batch": "05",
+  "date": "2026-10-26",
+  "family": "mcp-server",
+  "family_label": "MCP-servrar med nordisk avsändare",
+  "goal": "MCP-servrar publicerade av nordiska organisationer, i officiella registret eller på GitHub.",
+  "status": "closed",
+  "started_at": "2026-10-26T22:02:14.256Z",
+  "queries": [
+    {
+      "q": "registry.modelcontextprotocol.io — full genomsökning på nordiska publicister",
+      "done": true,
+      "note": "Hämtade 40 sidor à 100 servrar = 4 000 poster, 1 164 unika servernamn. Noll träffar på reverse-DNS-prefix .se/.no/.dk/.fi/.is. Nyckelordssökning på länder och nordiska städer i namn, titel och beskrivning gav en enda träff: ai.husverket/husverket, en kunskapsbas för prefabricerade attefallshus. Det är en slutanvändartjänst, inte AI-infrastruktur."
+    },
+    {
+      "q": "github MCP server Sweden",
+      "done": true,
+      "note": "gh search: 'mcp server location:Sweden' gav 0 träffar. topic:mcp-server+sweden gav 28 träffar, men alla är dataåtkomst-servrar: Riksdagen, SCB, Kolada, Skolverket, Sveriges Radio, Avanza, nordiska bolagsregister. Publicerade av enskilda utvecklare, inte av infrastrukturoperatörer."
+    },
+    {
+      "q": "MCP server Norge Danmark Finland",
+      "done": true,
+      "note": "'mcp in:name nordic' gav 9 träffar: bolagsregister, väder, energidata, finansiell data, samt tre stycken som avser Nordic Semiconductor-hårdvara (PPK2, nRF52, CAN). Ingen av dem är en nordisk AI-infrastrukturaktör."
+    },
+    {
+      "q": "mcp server svensk myndighet organisation",
+      "done": true,
+      "note": "De svenska myndighets-MCP:erna (Riksdagen, SCB, Kolada, Skolverket) är byggda av privatpersoner ovanpå öppna data. Myndigheterna publicerar inte servrarna själva och är därför inte avsändare."
+    },
+    {
+      "q": "Har nordiska infrastrukturleverantörer egna MCP-servrar?",
+      "done": true,
+      "note": "Kontrollerade Berget AI och staik mot GitHub: 0 publika MCP-repon hos båda. Aderian GDM uppger MCP-stöd i sin DPA och i infra-databasen, men det är en funktion i en befintlig post, inte en ny organisation. Slutsats: MCP-lagret i Norden består av dataåtkomst ovanpå öppna data, inte av infrastruktur."
+    }
+  ],
+  "candidates": [],
+  "closed_at": "2026-10-26T22:02:33.325Z",
+  "outcome": {
+    "new": 0,
+    "rejected": 0,
+    "ambiguous": 0
+  },
+  "started_at_note": "Rättad mot körloggen. Fältet skrevs för hand när batchen fylldes i och var då felaktigt."
+}

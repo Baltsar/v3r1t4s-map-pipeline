@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "description": "Scope and stop conditions for the overnight run. Everything the runner needs to decide 'keep going or stop' lives here, so a stopped run can be explained by reading one file.",
+  "layers": {
+    "existing": [
+      "inference_api",
+      "gateway_router",
+      "platform_assistant",
+      "compute_gpu"
+    ],
+    "proposed": [
+      "mcp_server",
+      "hosting",
+      "sovereign_cloud"
+    ],
+    "note": "Proposed layers exist only in the candidate file. opensverige-ai-infra schema.json is not touched; layer_proposal flags the proposal."
+  },
+  "geography": {
+    "primary": [
+      "SE"
+    ],
+    "secondary": [
+      "NO",
+      "DK",
+      "FI",
+      "IS"
+    ],
+    "rule": "Headquarters in the Nordics, or primary data centre / operating entity in the Nordics. A Nordic sales office only does not qualify."
+  },
+  "stop": {
+    "emptyBatchesInARow": 2,
+    "maxHours": 6,
+    "maxCandidates": 100
+  },
+  "batch": {
+    "searchesPerBatch": 8,
+    "targetCandidatesPerBatch": 6,
+    "maxCandidatesPerBatch": 10
+  },
+  "families": [
+    {
+      "id": "se-inference-gpu",
+      "label": "Svensk inferens och GPU",
+      "goal": "Svenska leverantörer som säljer token-API, modellhosting eller GPU-timmar och som inte finns i ai-infra eller ai-kartan.",
+      "queries": [
+        "svensk inferens API öppna modeller",
+        "svensk GPU moln AI träning",
+        "AI inference Sweden sovereign API",
+        "svenska AI datacenter GPU kapacitet"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "nordic-sovereign-cloud",
+      "label": "Nordisk sovereign cloud och hosting",
+      "goal": "Norska, danska, finska och isländska leverantörer med egen drift i Norden.",
+      "queries": [
+        "sovereign cloud Norway AI inference",
+        "dansk suveræn cloud AI hosting",
+        "Finnish sovereign AI cloud inference",
+        "Iceland AI data centre inference API"
+      ],
+      "priority": 2
+    },
+    {
+      "id": "mcp-server",
+      "label": "MCP-servrar med nordisk avsändare",
+      "goal": "MCP-servrar publicerade av nordiska organisationer, i officiella registret eller på GitHub.",
+      "queries": [
+        "registry.modelcontextprotocol.io nordic publisher",
+        "github MCP server Sweden",
+        "MCP server Norge Danmark Finland",
+        "mcp server svensk myndighet organisation"
+      ],
+      "priority": 5
+    },
+    {
+      "id": "sovereignty-compliance",
+      "label": "Suveränitet och compliance",
+      "goal": "Leverantörer som säljer på Cloud Act-frihet, EU-suveränitet eller zero retention. DPA och villkor är primärkällan, inte marknadscopy.",
+      "queries": [
+        "GDPR AI API no US parent EU hosted",
+        "Cloud Act free AI inference Europe",
+        "zero retention LLM API EU data centre",
+        "schrems II AI leverantör suveränitet"
+      ],
+      "priority": 4
+    },
+    {
+      "id": "national-hpc",
+      "label": "Nationell HPC och AI-fabriker",
+      "goal": "Nationella beräkningsresurser, AI-fabriker och forskningsinfrastruktur i Norden som erbjuder kapacitet utanför lärosätena.",
+      "queries": [
+        "nationell GPU resurs AI Sverige",
+        "EuroHPC AI factory Nordic",
+        "Norge nasjonal AI infrastruktur GPU",
+        "LUMI AI factory access"
+      ],
+      "priority": 3
+    },
+    {
+      "id": "register-verification",
+      "label": "Registerverifiering",
+      "goal": "Verifiera juridiskt namn, org.nr och jurisdiktion för kandidater funna i tidigare familjer. Ger confirmed på ownership-fälten.",
+      "queries": [
+        "allabolag.se organisationsnummer",
+        "data.brreg.no enhetsregisteret",
+        "cvrapi.dk CVR opslag",
+        "avoindata.prh.fi yrityshaku"
+      ],
+      "priority": 6,
+      "discovery": false,
+      "note": "Verifieringsfamilj. Letar inte nya organisationer, utan stänger claimed-fält på redan funna. Räknas därför inte som uttömd när den ger noll nya — annars skulle stopvillkoret slå till på att verifieringen fungerade."
+    }
+  ],
+  "family_order_note": "priority är ordningen familjerna körs i när de är lika körda. Högst avkastning först: svensk inferens och nordisk sovereign cloud ger flest verifierbara poster per sökning.",
+  "discovery_note": "Familjer med discovery:false räknas inte in i tomma-i-rad-regeln. Regeln finns för att upptäcka att sökandet är slut, inte att verifieringen är gjord."
+}

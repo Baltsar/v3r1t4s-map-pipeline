@@ -1,0 +1,312 @@
+{
+  "batch": "04",
+  "date": "2026-10-26",
+  "family": "sovereignty-compliance",
+  "family_label": "Suveränitet och compliance",
+  "goal": "Leverantörer som säljer på Cloud Act-frihet, EU-suveränitet eller zero retention. DPA och villkor är primärkällan, inte marknadscopy.",
+  "status": "closed",
+  "started_at": "2026-10-26T22:00:41.491Z",
+  "queries": [
+    {
+      "q": "svensk molnleverantör DPA Cloud Act fri zero retention AI API suverän 2026",
+      "done": true,
+      "note": "Gav Liminity (ny). Aderian GDM, Berget och staik är redan i baslinjen."
+    },
+    {
+      "q": "Nordic sovereign AI provider DPA zero data retention no training EU data centre 2026",
+      "done": true,
+      "note": "Gav Solheim (estniskt bolag, GPU i Finland) — avförd, Estland ligger utanför den nordiska geografin. Gav också Bergets DPA, som var den verkliga ingången."
+    },
+    {
+      "q": "Läs Berget AI:s DPA bilaga 1, underbiträdeslista",
+      "done": true,
+      "note": "Avgörande fynd. DPA:n namnger AI Iron AB (559490-8054, GPU bare-metal), Obenet AB (556898-6763, colocation) och Acebit AB (559265-3538, nät och serverdrift). AI Iron är samma bolag som Airon, som redan finns i baslinjen men utan org.nr där. Obenet är ny. Acebit avförd: konsultbolag, inte infrastruktur."
+    },
+    {
+      "q": "Liminity AB organisationsnummer Stockholm moln AI plattform GPU",
+      "done": true,
+      "note": "Liminity AB, 559091-7851, Stockholm. Bekräftad mot bolagskatalog."
+    },
+    {
+      "q": "GPU-colocation Stockholm Obenet Riverlake Kista Gate kapacitet",
+      "done": true,
+      "note": "Två hallar: Riverlake Älvsjö 5 MW cirka 400 rack, Kista Gate 2 MW 46 rack. 22 kW per rack med luftkyla, vätskekyla däröver."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "liminity",
+      "name": {
+        "value": "Liminity",
+        "status": "claimed",
+        "source_url": "https://www.liminity.se/molntjanster/ai-plattform",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "legal_name": {
+        "value": "Liminity AB",
+        "status": "confirmed",
+        "source_url": "https://bolag.hk-r.se/liminity-ab---937859",
+        "source_type": "third_party",
+        "note": "Org.nr 559091-7851, registrerat 2016-12-16, säte Stockholm. Bolagets verksamhet är webbhotell, serverhotell och domänhantering, inte AI specifikt.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "website": "https://www.liminity.se/",
+      "layer": {
+        "value": "inference_api",
+        "status": "claimed",
+        "source_url": "https://www.liminity.se/molntjanster/ai-plattform",
+        "source_type": "own_site",
+        "note": "OpenAI-kompatibelt API mot öppna modeller på egna NVIDIA RTX PRO 6000 i eget svenskt datacenter. Publicerade priser: MIG-instans från 3 995 kr/mån, dedikerad GPU från 12 995 kr/mån.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "layer_proposal": false,
+      "sovereignty": {
+        "country_hq": {
+          "value": "Sverige",
+          "status": "confirmed",
+          "source_url": "https://bolag.hk-r.se/liminity-ab---937859",
+          "source_type": "third_party",
+          "note": "Säte Stockholm enligt bolagskatalogen.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "ownership_jurisdiction": {
+          "value": "Sverige/EU",
+          "status": "claimed",
+          "source_url": "https://www.liminity.se/molntjanster/ai-plattform",
+          "source_type": "own_site",
+          "note": "Uppger att all behandling sker i Sverige, att data aldrig lämnar landet och att kunden får personuppgiftsbiträdesavtal.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "foreign_parent": {
+          "value": null,
+          "status": "unknown",
+          "note": "Inget moderbolag anges i bolagskatalogen. Ägarförhållandet är inte utrett.",
+          "verified_by": "agent"
+        },
+        "zero_retention": {
+          "value": null,
+          "status": "unknown",
+          "note": "Formuleringen är 'inget sparas längre än nödvändigt', vilket inte är zero retention. Ingen DPA är publicerad. Ska inte tolkas som zero retention.",
+          "verified_by": "agent"
+        },
+        "no_training": {
+          "value": true,
+          "status": "claimed",
+          "source_url": "https://www.liminity.se/molntjanster/ai-plattform",
+          "source_type": "own_site",
+          "note": "Uppger att data aldrig används för träning. Ej verifierat mot DPA, som inte är publik.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "data_location": {
+          "value": "Sverige",
+          "status": "claimed",
+          "source_url": "https://www.liminity.se/molntjanster",
+          "source_type": "own_site",
+          "note": "Eget datacenter i Sverige. Ort anges inte på sajten.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        }
+      },
+      "description": {
+        "value": "Svenskt hostingbolag som kör öppna språkmodeller på egna RTX PRO 6000-GPU:er i eget svenskt datacenter, med OpenAI-kompatibelt API och publicerade priser. Säljer även VPS, Kubernetes och dedikerade servrar ur samma plattform.",
+        "status": "claimed",
+        "source_url": "https://www.liminity.se/molntjanster/ai-plattform",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "org_number": {
+        "value": "559091-7851",
+        "status": "confirmed",
+        "source_url": "https://bolag.hk-r.se/liminity-ab---937859",
+        "source_type": "third_party",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "sources": [
+        {
+          "url": "https://www.liminity.se/molntjanster/ai-plattform",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://www.liminity.se/molntjanster",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://bolag.hk-r.se/liminity-ab---937859",
+          "source_type": "third_party",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        }
+      ],
+      "dedupe": {
+        "checked_against": [
+          "ai-infra",
+          "ai-kartan"
+        ],
+        "matches": [],
+        "verdict": "new"
+      },
+      "questions": [
+        "Liminity är i grunden ett hostingbolag med AI som en av flera tjänster, som Binero och UpCloud. Samma lagerfråga som för dem.",
+        "Ingen DPA är publicerad, bara ett påstående om att personuppgiftsbiträdesavtal tecknas. Zero retention får därför inte skrivas som vare sig ja eller nej — det är oresearchat, inte nej.",
+        "Sajten uppger hundratals miljarder tokens i månaden i egen drift. Den siffran är leverantörens och ska inte in i ett kapacitetsfält utan källa som visar den."
+      ],
+      "discovered_at": "2026-10-26",
+      "batch": "runs/2026-10-26/batch-04.json"
+    },
+    {
+      "id": "obenet",
+      "name": {
+        "value": "Obenet",
+        "status": "claimed",
+        "source_url": "https://www.obe.net/en/foretag/datacenter",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "legal_name": {
+        "value": "Obenet AB",
+        "status": "claimed",
+        "source_url": "https://berget.ai/en/dpa",
+        "source_type": "provider_terms",
+        "note": "Berget AI:s personuppgiftsbiträdesavtal anger Obenet AB med org.nr 556898-6763 som underbiträde för colocation. En avtalshandling är starkare än marknadscopy men svagare än ett register, så status är claimed till numret är slaget i Bolagsverket.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "website": "https://www.obe.net/",
+      "layer": {
+        "value": "hosting",
+        "status": "claimed",
+        "source_url": "https://www.obe.net/en/foretag/datacenter",
+        "source_type": "own_site",
+        "note": "Colocation i två egna hallar i Stockholm: Riverlake i Älvsjö och Kista Gate i Kista, tillsammans 7 MW och nära 450 rack. GPU-rack upp till 22 kW med luftkyla, vätskekyla däröver. Kunden tar med egen hårdvara — Obenet säljer inte GPU:er.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "layer_proposal": true,
+      "sovereignty": {
+        "country_hq": {
+          "value": "Sverige",
+          "status": "claimed",
+          "source_url": "https://www.obe.net/en/foretag/datacenter",
+          "source_type": "own_site",
+          "note": "Två datacenter i Stockholm. Org.nr anges av Berget AI i deras DPA, inte på Obenets egen sajt.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "ownership_jurisdiction": {
+          "value": "Sverige/EU",
+          "status": "claimed",
+          "source_url": "https://www.obe.net/en/foretag/datacenter",
+          "source_type": "own_site",
+          "note": "Eget nät AS3399, carrier-neutrala hallar i Stockholm. Ingen uttalad jurisdiktionspolicy på sidan.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "foreign_parent": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "zero_retention": {
+          "value": null,
+          "status": "not_applicable",
+          "note": "Colocation. Obenet ser inte kundens data och kan därför inte ha en retentionspolicy för den.",
+          "verified_by": "agent"
+        },
+        "no_training": {
+          "value": null,
+          "status": "not_applicable",
+          "note": "Colocation. Ingen modell tränas av Obenet.",
+          "verified_by": "agent"
+        },
+        "data_location": {
+          "value": "Stockholm, Sverige",
+          "status": "claimed",
+          "source_url": "https://www.obe.net/en/foretag/datacenter",
+          "source_type": "own_site",
+          "note": "Riverlake i Älvsjö, 5 MW och cirka 400 rack. Kista Gate i Kista, 2 MW och 46 rack.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        }
+      },
+      "description": {
+        "value": "Svensk colocation-operatör med två hallar i Stockholm byggda för hög densitet: upp till 22 kW per rack med luftkyla, vätskekyla däröver, 400 Gbit/s per port på eget nät. Levererar rack, kraft, kyla och nät — kunden tar med egen GPU-hårdvara.",
+        "status": "claimed",
+        "source_url": "https://www.obe.net/foretag/datacenter/ai",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "org_number": {
+        "value": "556898-6763",
+        "status": "claimed",
+        "source_url": "https://berget.ai/en/dpa",
+        "source_type": "provider_terms",
+        "note": "Numret kommer från Berget AI:s DPA, inte från Obenets egen sajt. Kräver registerslagning för confirmed.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "sources": [
+        {
+          "url": "https://www.obe.net/en/foretag/datacenter",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://www.obe.net/foretag/datacenter/ai",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://berget.ai/en/dpa",
+          "source_type": "provider_terms",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        }
+      ],
+      "dedupe": {
+        "checked_against": [
+          "ai-infra",
+          "ai-kartan"
+        ],
+        "matches": [],
+        "verdict": "new"
+      },
+      "questions": [
+        "ISO 27001 anges som 'certification in progress' i båda hallarna. Det är planned, inte uppnått, och får inte skrivas som en certifiering förrän certifikatet finns.",
+        "Obenet säljer inte GPU eller inferens. Posten hör bara hemma i infra om colocation räknas som ett lager. Det är ett principbeslut, inte en detalj — samma fråga gäller Cerebro Cloud.",
+        "Org.nr kommer från en annan leverantörs DPA. Det är en bra källa men inte ett register. Slå det i Bolagsverket innan posten flyttas in."
+      ],
+      "discovered_at": "2026-10-26",
+      "batch": "runs/2026-10-26/batch-04.json"
+    }
+  ],
+  "closed_at": "2026-10-26T22:01:39.189Z",
+  "outcome": {
+    "new": 2,
+    "rejected": 0,
+    "ambiguous": 0
+  },
+  "started_at_note": "Rättad mot körloggen. Fältet skrevs för hand när batchen fylldes i och var då felaktigt."
+}

@@ -1,0 +1,200 @@
+{
+  "batch": "03",
+  "date": "2026-10-26",
+  "family": "national-hpc",
+  "family_label": "Nationell HPC och AI-fabriker",
+  "goal": "Nationella beräkningsresurser, AI-fabriker och forskningsinfrastruktur i Norden som erbjuder kapacitet utanför lärosätena.",
+  "status": "closed",
+  "started_at": "2026-10-26T21:57:08.371Z",
+  "queries": [
+    {
+      "q": "nationell GPU resurs AI Sverige",
+      "done": true,
+      "note": "Gav UPPMAX (ny). Stor sidoobservation: NAISS nya system Arrhenius (382 noder × 4 GH200) är i produktion från 2026-07-01 och ersätter Alvis och Mimer. NAISS finns redan på kartan, men Arrhenius är inte nämnd där."
+    },
+    {
+      "q": "UPPMAX GPU beräkningsresurs AI Sverige nationell infrastruktur ansökan",
+      "done": true,
+      "note": "Bekräftade Bianca (10 noder med 2× A100 40 GB, känslig data) och Pelle (T4, L40S, H100)."
+    },
+    {
+      "q": "EuroHPC AI factory Nordic",
+      "done": true,
+      "note": "LUMI AI Factory är en tjänst ovanpå CSC:s LUMI, inte en egen nordisk organisation. Redovisas i CSC-posten i stället för som separat kandidat."
+    },
+    {
+      "q": "CSC Finland LUMI AI factory national supercomputer GPU access for companies",
+      "done": true,
+      "note": "Gav CSC (ny). LUMI AI Factory ger företag tillgång via CSC, med kommersiell åtkomst och Try&Buy."
+    },
+    {
+      "q": "Norge nasjonal AI infrastruktur GPU",
+      "done": true,
+      "note": "Gav Sigma2 (ny): Olivia med 448 GH200, Betzy, Saga, NIRD, samt KI-fabrikken."
+    },
+    {
+      "q": "Sigma2 Norway national e-infrastructure GPU LUMI Betzy Norwegian AI factory",
+      "done": true,
+      "note": "Bekräftade Olivia-utbyggnaden 2026-02-27 från 304 till 448 GH200."
+    },
+    {
+      "q": "dansk national HPC GPU AI infrastruktur",
+      "done": true,
+      "note": "Gav UCloud AI (ny), som kör på BITTEN i Sønderborg och har OpenAI-kompatibelt API. Gefion/DCAI nämns som relaterad resurs."
+    },
+    {
+      "q": "LUMI AI factory access",
+      "done": true,
+      "note": "LUMI-AI-systemet är planerat till andra halvåret 2027 med AMD MI430X. Det är planned, inte live, och får inte skrivas som befintlig kapacitet."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "uppmax",
+      "name": {
+        "value": "UPPMAX",
+        "status": "claimed",
+        "source_url": "https://www.uu.se/centrum/uppmax/om-oss",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "legal_name": {
+        "value": "Uppsala universitet",
+        "status": "confirmed",
+        "source_url": "https://www.uu.se/kontakt-och-organisation/kontakta-universitetet/fakturering-och-betalning",
+        "source_type": "third_party",
+        "note": "UPPMAX är en centrumbildning inom institutionen för informationsteknologi, inte ett eget juridiskt subjekt. Org.nr avser Uppsala universitet. Certifikat från SCB bekräftar samma nummer.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "website": "https://www.uppmax.uu.se/",
+      "layer": {
+        "value": "compute_gpu",
+        "status": "claimed",
+        "source_url": "https://supr.naiss.se/resource/bianca/",
+        "source_type": "own_docs",
+        "note": "Bianca: 204 tvåsocklade CPU-noder, 75 fat-noder, 15 noder med 512 GB, samt 10 noder med 2× NVIDIA A100 40 GB, avsedd för känslig data. Pelle: noder med T4, L40S och H100, finansierad av Uppsala universitet.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "layer_proposal": false,
+      "sovereignty": {
+        "country_hq": {
+          "value": "Sverige",
+          "status": "confirmed",
+          "source_url": "https://www.uu.se/kontakt-och-organisation/kontakta-universitetet/fakturering-och-betalning",
+          "source_type": "third_party",
+          "note": "Uppsala universitet, org.nr 202100-2932, säte Uppsala.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "ownership_jurisdiction": {
+          "value": "Sverige/EU",
+          "status": "claimed",
+          "source_url": "https://www.uu.se/centrum/uppmax/om-oss",
+          "source_type": "own_site",
+          "note": "Statlig myndighet. Ingen uttalad jurisdiktionspolicy på sidan; slutsatsen vilar på att universitetet är en svensk myndighet.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "foreign_parent": {
+          "value": false,
+          "status": "confirmed",
+          "source_url": "https://www.uu.se/kontakt-och-organisation/kontakta-universitetet/fakturering-och-betalning",
+          "source_type": "third_party",
+          "note": "Svensk statlig myndighet, inget moderbolag.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "zero_retention": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "no_training": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "data_location": {
+          "value": "Uppsala, Sverige",
+          "status": "claimed",
+          "source_url": "https://www.uu.se/centrum/uppmax/om-oss",
+          "source_type": "own_site",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        }
+      },
+      "description": {
+        "value": "Uppsala universitets centrum för högprestandaberäkning och storskalig lagring. Driver Bianca för känsliga data och Pelle med T4, L40S och H100. Är ett av centren inom NAISS och finansieras av universitetet och NAISS.",
+        "status": "claimed",
+        "source_url": "https://www.uu.se/centrum/uppmax/om-oss",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "org_number": {
+        "value": "202100-2932",
+        "status": "confirmed",
+        "source_url": "https://www.uu.se/kontakt-och-organisation/kontakta-universitetet/fakturering-och-betalning",
+        "source_type": "third_party",
+        "note": "Avser Uppsala universitet, inte UPPMAX som sådant.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "sources": [
+        {
+          "url": "https://www.uu.se/centrum/uppmax/om-oss",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://supr.naiss.se/resource/bianca/",
+          "source_type": "own_docs",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://www.uu.se/kontakt-och-organisation/kontakta-universitetet/fakturering-och-betalning",
+          "source_type": "third_party",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        }
+      ],
+      "dedupe": {
+        "checked_against": [
+          "ai-infra",
+          "ai-kartan"
+        ],
+        "matches": [
+          {
+            "id": "ai-for-research-uu",
+            "kind": "org_number",
+            "detail": "2021002932 delas med AI for Research, Uppsala universitet, men namnen liknar inte varandra (0.05)"
+          }
+        ],
+        "verdict": "ambiguous"
+      },
+      "questions": [
+        "Kartan har redan C3SE, HPC2N, LUNARC, NSC och PDC som egna poster men inte UPPMAX. Varför? Antingen är UPPMAX ett förbiseende, eller så finns en regel om vilka centra som räknas. Regeln bör skrivas ner innan posten flyttas in.",
+        "UPPMAX är inte ett eget juridiskt subjekt. Posten blir därför en avdelning under Uppsala universitet, till skillnad från de flesta andra poster i infra.",
+        "Pelle är finansierad av Uppsala universitet och inte en NAISS-resurs. Tillgången för utomstående är därför oklar och bör inte antas.",
+        "Möjlig dubblett: ai-for-research-uu (org_number). Människa avgör."
+      ],
+      "discovered_at": "2026-10-26",
+      "batch": "runs/2026-10-26/batch-03.json"
+    }
+  ],
+  "closed_at": "2026-10-26T21:59:39.602Z",
+  "outcome": {
+    "new": 1,
+    "rejected": 0,
+    "ambiguous": 1
+  },
+  "started_at_note": "Rättad mot körloggen. Fältet skrevs för hand när batchen fylldes i och var då felaktigt."
+}
