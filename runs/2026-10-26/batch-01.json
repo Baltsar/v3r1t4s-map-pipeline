@@ -1,0 +1,557 @@
+{
+  "batch": "01",
+  "date": "2026-10-26",
+  "family": "se-inference-gpu",
+  "family_label": "Svensk inferens och GPU",
+  "goal": "Svenska leverantörer som säljer token-API, modellhosting eller GPU-timmar och som inte finns i ai-infra eller ai-kartan.",
+  "status": "closed",
+  "started_at": "2026-10-26T21:50:56.527Z",
+  "queries": [
+    {
+      "q": "svensk inferens API öppna modeller",
+      "done": true,
+      "note": "Gav Berget AI, staik (båda redan i baslinjen) och Sval Compute (ny)."
+    },
+    {
+      "q": "svensk GPU moln AI träning",
+      "done": true,
+      "note": "Gav Kepler Cloud (ny)."
+    },
+    {
+      "q": "AI inference Sweden sovereign API",
+      "done": true,
+      "note": "Bekräftade Sval Compute och Kepler Cloud. Inga ytterligare."
+    },
+    {
+      "q": "svenska AI datacenter GPU kapacitet",
+      "done": true,
+      "note": "Gav Binero och Cerebro Cloud (båda nya). Hydro66 utgår: anläggningen ägs av Northern Data sedan 2021 och säljs inte under eget namn."
+    },
+    {
+      "q": "ny svensk AI molnleverantör GPU hosting 2026 startup inferens Sverige lansering",
+      "done": true,
+      "note": "Upprepning av samma fyra. Signal om att familjen börjar ta slut."
+    },
+    {
+      "q": "Binero GPU AI moln Iver Hydro66 svensk hosting AI infrastruktur leverantör",
+      "done": true,
+      "note": "Binero bekräftad med GPU-instanser och AI-colocation. Hydro66 avförd."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "sval-compute",
+      "name": {
+        "value": "Sval Compute",
+        "status": "claimed",
+        "source_url": "https://svalcompute.com/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "website": "https://svalcompute.com/",
+      "layer": {
+        "value": "inference_api",
+        "status": "claimed",
+        "source_url": "https://svalcompute.com/",
+        "source_type": "own_site",
+        "note": "Inferens-API för klassificering, moderering, embeddings och reranking. Modeller som anges på startsidan: shieldstral-1.0-3b, gemma-4-26b-a4b, bge-m3. API:t ligger på api.svalcompute.com/v1.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "layer_proposal": false,
+      "sovereignty": {
+        "country_hq": {
+          "value": "Sverige",
+          "status": "claimed",
+          "source_url": "https://svalcompute.com/",
+          "source_type": "own_site",
+          "note": "Uppger sig vara svensk inferensleverantör med GPU-hårdvara de äger och driver i Sverige. Inget juridiskt personnummer eller bolagsnamn anges på sajten.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "ownership_jurisdiction": {
+          "value": "Sverige/EU",
+          "status": "claimed",
+          "source_url": "https://svalcompute.com/",
+          "source_type": "own_site",
+          "note": "Hela serveringsvägen från nätintag till modellutdata uppges stanna i Sverige under EU-jurisdiktion.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "foreign_parent": {
+          "value": null,
+          "status": "unknown",
+          "note": "Ingen ägarinformation finns offentligt på sajten. Ej efterforskat i register.",
+          "verified_by": "agent"
+        },
+        "zero_retention": {
+          "value": true,
+          "status": "claimed",
+          "source_url": "https://svalcompute.com/",
+          "source_type": "own_site",
+          "note": "Uppger att prompts och svar endast finns i minnet under bearbetning, med prefix-cache i minnet och kort TTL per tenant. Ej verifierat mot DPA.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "no_training": {
+          "value": null,
+          "status": "unknown",
+          "note": "Sajten uttalar sig om lagring men inte om träning på kunddata.",
+          "verified_by": "agent"
+        },
+        "data_location": {
+          "value": "Sverige",
+          "status": "claimed",
+          "source_url": "https://svalcompute.com/",
+          "source_type": "own_site",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        }
+      },
+      "description": {
+        "value": "Svensk inferens-API för högvolymsuppgifter: klassificering, moderering, embeddings och reranking på egen GPU-hårdvara i Sverige. API-åtkomst ges på förfrågan, ingen självbetjäning.",
+        "status": "claimed",
+        "source_url": "https://svalcompute.com/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "sources": [
+        {
+          "url": "https://svalcompute.com/",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": null,
+          "fetched_at": "2026-10-26"
+        }
+      ],
+      "dedupe": {
+        "checked_against": [
+          "ai-infra",
+          "ai-kartan"
+        ],
+        "matches": [],
+        "verdict": "new"
+      },
+      "questions": [
+        "Vilket juridiskt subjekt driver tjänsten? Sajten namnger personer men inget bolag. Är det en enskild firma? Om ja tas posten inte emot av kartan, som kräver att personen själv lägger till den.",
+        "robots.txt på svalcompute.com gick inte att hämta (404 eller nätverksfel). Sidan lästes enligt konservativ tolkning. Kontrollera manuellt innan intag.",
+        "Åtkomst ges bara på förfrågan. Ingen prislista finns, så pris går inte att jämföra."
+      ],
+      "discovered_at": "2026-10-26",
+      "batch": "runs/2026-10-26/batch-01.json"
+    },
+    {
+      "id": "kepler-cloud",
+      "name": {
+        "value": "Kepler Cloud",
+        "status": "claimed",
+        "source_url": "https://keplercloud.se/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "legal_name": {
+        "value": "Kepler Technologies AB",
+        "status": "confirmed",
+        "source_url": "https://www.allabolag.se/foretag/kepler-technologies-ab/helsingborg/datacenters/2K3E28RI5YDLG",
+        "source_type": "third_party",
+        "note": "Bolaget anger självt samma namn och org.nr i sin RFP-pack.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "website": "https://keplercloud.se/",
+      "layer": {
+        "value": "compute_gpu",
+        "status": "claimed",
+        "source_url": "https://keplercloud.se/gpu/",
+        "source_type": "own_site",
+        "note": "Single-tenant GPU: 6× L40S 48 GB, 8× H100 80 GB och en HGX-baseboard med 8× Delta-Next H100 80 GB, i Falkenberg. Säljs per timme eller på 3–36 månaders commit.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "layer_proposal": false,
+      "sovereignty": {
+        "country_hq": {
+          "value": "Sverige",
+          "status": "confirmed",
+          "source_url": "https://www.allabolag.se/foretag/kepler-technologies-ab/helsingborg/datacenters/2K3E28RI5YDLG",
+          "source_type": "third_party",
+          "note": "Säte Helsingborg. Registrerat 2011-06-30 enligt allabolag; letabolag anger första registrering 2020-10-02 och start 2011. Datumen motsäger varandra, hemvisten gör det inte.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "ownership_jurisdiction": {
+          "value": "Sverige/EU",
+          "status": "claimed",
+          "source_url": "https://keplercloud.se/trust/",
+          "source_type": "own_site",
+          "note": "Uppger svenskt bolag, svensk personal, svensk och EU-rätt, ingen US Cloud Act. DPA tecknas elektroniskt.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "foreign_parent": {
+          "value": false,
+          "status": "claimed",
+          "source_url": "https://letabolag.se/foretag/hdl-group-ab-559355-7324",
+          "source_type": "third_party",
+          "note": "Moderbolag HDL Group AB (559355-7324), Helsingborg. Utländskt ägande ovanför HDL Group är inte kontrollerat, så status är claimed och inte confirmed.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "zero_retention": {
+          "value": null,
+          "status": "unknown",
+          "note": "Ingen uttalad zero retention-policy hittad. Integritetspolicyn finns men behandlar personuppgifter, inte inferensdata.",
+          "verified_by": "agent"
+        },
+        "no_training": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "data_location": {
+          "value": "Falkenberg, Sverige",
+          "status": "claimed",
+          "source_url": "https://keplercloud.se/trust/",
+          "source_type": "own_site",
+          "note": "Falkenberg uppges vara enda regionen idag. Fler regioner ligger på roadmappen.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        }
+      },
+      "description": {
+        "value": "Svensk GPU- och molnplattform på egen hårdvara i Falkenberg. Säljer single-tenant GPU-kort för inferens och träning, med OpenStack under och API samt Terraform-provider.",
+        "status": "claimed",
+        "source_url": "https://keplercloud.se/gpu/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "org_number": {
+        "value": "556858-3131",
+        "status": "confirmed",
+        "source_url": "https://www.allabolag.se/foretag/kepler-technologies-ab/helsingborg/datacenters/2K3E28RI5YDLG",
+        "source_type": "third_party",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "sources": [
+        {
+          "url": "https://keplercloud.se/gpu/",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://keplercloud.se/rfp-pack/",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://keplercloud.se/trust/",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://www.allabolag.se/foretag/kepler-technologies-ab/helsingborg/datacenters/2K3E28RI5YDLG",
+          "source_type": "third_party",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        }
+      ],
+      "dedupe": {
+        "checked_against": [
+          "ai-infra",
+          "ai-kartan"
+        ],
+        "matches": [],
+        "verdict": "new"
+      },
+      "questions": [
+        "Motsägelse i egen källa: /en/llm/ skriver att H100-klass \"is on the roadmap\" medan /gpu/ skriver att 8× H100 80 GB står i racket idag. En av sidorna är inaktuell. Fråga leverantören vilken som gäller innan kapacitetsfältet sätts.",
+        "Allabolag anger 1 anställd och SNI 63100 hosting, medan sajten beskriver en flotta på 15 GPU-enheter och egen drift. Inte en motsägelse i sig, men värt att stämma av.",
+        "Ingen zero retention- eller no training-policy hittad. Suveränitetsprofilen är därför tunnare än de svenska konkurrenternas."
+      ],
+      "discovered_at": "2026-10-26",
+      "batch": "runs/2026-10-26/batch-01.json"
+    },
+    {
+      "id": "binero",
+      "name": {
+        "value": "Binero",
+        "status": "claimed",
+        "source_url": "https://binero.com/sv/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "legal_name": {
+        "value": "Binero Group AB (publ)",
+        "status": "confirmed",
+        "source_url": "https://www.allabolag.se/foretag/binero-group-ab-publ/stockholm/kontorstj%C3%A4nster/2JZUQTQI63II9",
+        "source_type": "third_party",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "website": "https://binero.com/sv/",
+      "layer": {
+        "value": "hosting",
+        "status": "claimed",
+        "source_url": "https://binero.com/sv/it-tjanster/molntjanster/publik-molntjanst/",
+        "source_type": "own_site",
+        "note": "OpenStack-baserad svensk IaaS med GPU-acceleration som instanstyp, plus colocation anpassad för AI- och GPU-kluster. GPU är en flavor i en bred plattform, inte en egen AI-produkt — därför hosting och inte compute_gpu.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "layer_proposal": true,
+      "sovereignty": {
+        "country_hq": {
+          "value": "Sverige",
+          "status": "confirmed",
+          "source_url": "https://www.allabolag.se/foretag/binero-group-ab-publ/stockholm/kontorstj%C3%A4nster/2JZUQTQI63II9",
+          "source_type": "third_party",
+          "note": "Säte Stockholm. Eget datacenter i Vallentuna enligt årsredovisningen.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "ownership_jurisdiction": {
+          "value": "Sverige/EU",
+          "status": "claimed",
+          "source_url": "https://binero.com/sv/it-tjanster/molntjanster/publik-molntjanst/",
+          "source_type": "own_site",
+          "note": "Uppger att all lagrad data hanteras enbart i Sverige under svensk lag och GDPR.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "foreign_parent": {
+          "value": false,
+          "status": "confirmed",
+          "source_url": "https://www.aktiemarknadsnamnden.se/202554",
+          "source_type": "regulator",
+          "note": "Aktiemarknadsnämndens beslut 2025:54 beskriver majoritetsägaren Tiliaflore AB (559010-5945) som ett svenskt aktiebolag. Ägarkedjan ovanför det är inte prövad i beslutet.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "zero_retention": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "no_training": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "data_location": {
+          "value": "Vallentuna, Sverige",
+          "status": "claimed",
+          "source_url": "https://binero.com/sv/it-tjanster/molntjanster/molnlagring-for-foretag/",
+          "source_type": "own_site",
+          "note": "Eget datacenter i Vallentuna utanför Stockholm, förnybar energi.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        }
+      },
+      "description": {
+        "value": "Svensk moln- och driftleverantör med eget datacenter i Vallentuna. Erbjuder OpenStack-baserad IaaS med GPU-acceleration, colocation byggd för högdensitets AI- och GPU-kluster, samt managerade tjänster.",
+        "status": "claimed",
+        "source_url": "https://binero.com/sv/it-tjanster/molntjanster/publik-molntjanst/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "org_number": {
+        "value": "556264-3022",
+        "status": "confirmed",
+        "source_url": "https://www.allabolag.se/foretag/binero-group-ab-publ/stockholm/kontorstj%C3%A4nster/2JZUQTQI63II9",
+        "source_type": "third_party",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "sources": [
+        {
+          "url": "https://binero.com/sv/it-tjanster/molntjanster/publik-molntjanst/",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://binero.com/sv/datacenter/colocation/",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://www.allabolag.se/foretag/binero-group-ab-publ/stockholm/kontorstj%C3%A4nster/2JZUQTQI63II9",
+          "source_type": "third_party",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://www.aktiemarknadsnamnden.se/202554",
+          "source_type": "regulator",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        }
+      ],
+      "dedupe": {
+        "checked_against": [
+          "ai-infra",
+          "ai-kartan"
+        ],
+        "matches": [],
+        "verdict": "new"
+      },
+      "questions": [
+        "Lagerfrågan: Binero är en bred IaaS där GPU är en instanstyp. Ska de ligga som compute_gpu i infra (som GleSYS, Elastx, Safespring) eller som det föreslagna hosting-lagret? Det avgör om de är direkt jämförbara.",
+        "Ingen prislista för GPU-instanser hittades i den publika HTML:en. Pris går inte att fylla i utan att öppna kalkylatorn."
+      ],
+      "discovered_at": "2026-10-26",
+      "batch": "runs/2026-10-26/batch-01.json"
+    },
+    {
+      "id": "cerebro-cloud",
+      "name": {
+        "value": "Cerebro Cloud",
+        "status": "claimed",
+        "source_url": "https://cerebro.cloud/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "legal_name": {
+        "value": "Barrage Nordx AB",
+        "status": "confirmed",
+        "source_url": "https://www.allabolag.se/foretag/barrage-nordx-ab/boden/datacenters/2KHIRK7I5YDLG",
+        "source_type": "third_party",
+        "note": "Kopplingen Cerebro Cloud till Barrage Nordx AB står i Cerebros eget pressmeddelande: koncernen äger och driver kapaciteten i Sverige genom Barrage Nordx AB.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "website": "https://cerebro.cloud/",
+      "layer": {
+        "value": "hosting",
+        "status": "claimed",
+        "source_url": "https://cerebro.cloud/",
+        "source_type": "own_site",
+        "note": "Colocation och managed cloud i Boden: Hydrocompute 1 (2 MW), 2 (4 MW) och 3 (12 MW), high-density rack med direktvätskekylning, plus GPU-marketplace. Colocation är kärnan, inte token-försäljning.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "layer_proposal": true,
+      "sovereignty": {
+        "country_hq": {
+          "value": "Sverige",
+          "status": "confirmed",
+          "source_url": "https://www.allabolag.se/foretag/barrage-nordx-ab/boden/datacenters/2KHIRK7I5YDLG",
+          "source_type": "third_party",
+          "note": "Barrage Nordx AB har säte i Boden, registrerat 2019-12-13.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "ownership_jurisdiction": {
+          "value": "Sverige/EU",
+          "status": "claimed",
+          "source_url": "https://cerebro.cloud/",
+          "source_type": "own_site",
+          "note": "Uppger svensk och EU-rätt för anläggningen i Boden.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "foreign_parent": {
+          "value": true,
+          "status": "claimed",
+          "source_url": "https://www.ai-infra-summit.com/press-releases/cerebro-cloud-and-axe-compute-power-an-axe-build-deployment-in-boden-sweden",
+          "source_type": "press",
+          "note": "Barrage-koncernen, grundad i Kroatien 2014, är gruppen bakom Cerebro Cloud. EU-land, men inte Sverige — det påverkar jurisdiktionsaxeln även om det inte är ett tredjelandsproblem.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "zero_retention": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "no_training": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "data_location": {
+          "value": "Boden, Sverige",
+          "status": "claimed",
+          "source_url": "https://cerebro.cloud/",
+          "source_type": "own_site",
+          "note": "Samtliga tre Hydrocompute-anläggningar ligger i Boden, Norrbotten.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        }
+      },
+      "description": {
+        "value": "Colocation och managed cloud i Boden för högdensitets AI-arbetslaster. Driver tre anläggningar under namnet Hydrocompute, med vätskekylning, InfiniBand och GPU-marketplace.",
+        "status": "claimed",
+        "source_url": "https://cerebro.cloud/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "org_number": {
+        "value": "559231-7191",
+        "status": "confirmed",
+        "source_url": "https://www.allabolag.se/foretag/barrage-nordx-ab/boden/datacenters/2KHIRK7I5YDLG",
+        "source_type": "third_party",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "sources": [
+        {
+          "url": "https://cerebro.cloud/",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://www.allabolag.se/foretag/barrage-nordx-ab/boden/datacenters/2KHIRK7I5YDLG",
+          "source_type": "third_party",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        }
+      ],
+      "dedupe": {
+        "checked_against": [
+          "ai-infra",
+          "ai-kartan"
+        ],
+        "matches": [],
+        "verdict": "new"
+      },
+      "questions": [
+        "Kapacitetssiffrorna (2, 4 och 12 MW) kommer från Cerebros egen sajt och ett PDF-dokument. De är claimed, inte confirmed — ingen oberoende källa finns.",
+        "Cerebro Cloud är ett varumärke, Barrage Nordx AB är subjektet. Frågan till infra: ska posten heta varumärket eller bolaget? ai-infra använder varumärke (t.ex. Berget AI för Berget AI AB).",
+        "Är Hydrocompute 1 verkligen samma fysiska anläggning som Hydro66 byggde i Boden? Northern Data förvärvade Hydro66 2021. Släktskapet är inte verifierat och påstås inte här."
+      ],
+      "discovered_at": "2026-10-26",
+      "batch": "runs/2026-10-26/batch-01.json"
+    }
+  ],
+  "closed_at": "2026-10-26T21:52:50.935Z",
+  "outcome": {
+    "new": 4,
+    "rejected": 0,
+    "ambiguous": 0
+  }
+}

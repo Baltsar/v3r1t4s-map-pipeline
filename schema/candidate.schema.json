@@ -1,0 +1,165 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/Baltsar/v3r1t4s-map-pipeline/schema/candidate.schema.json",
+  "title": "AI-kartan research candidate",
+  "description": "One candidate organisation. Every comparison field is a Fact: value + status + source + date. The provenance is the point.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "layer", "sources", "dedupe", "discovered_at", "batch"],
+  "definitions": {
+    "sourceType": {
+      "type": "string",
+      "enum": [
+        "company_register",
+        "regulator",
+        "third_party",
+        "academic",
+        "infra_dataset",
+        "own_site",
+        "own_docs",
+        "press",
+        "provider_site",
+        "provider_docs",
+        "provider_terms",
+        "pricing_page"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["confirmed", "claimed", "planned", "unknown", "not_applicable"]
+    },
+    "fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "status"],
+      "properties": {
+        "value": {
+          "type": ["boolean", "string", "number", "array", "null"]
+        },
+        "status": { "$ref": "#/definitions/status" },
+        "source_url": { "type": ["string", "null"] },
+        "source_type": {
+          "oneOf": [{ "$ref": "#/definitions/sourceType" }, { "type": "null" }]
+        },
+        "note": { "type": ["string", "null"] },
+        "verified_at": {
+          "type": ["string", "null"],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "verified_by": {
+          "type": ["string", "null"],
+          "enum": ["agent", "manual", "scraper", null]
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "source_type", "fetched_at"],
+      "properties": {
+        "url": { "type": "string", "minLength": 8 },
+        "source_type": { "$ref": "#/definitions/sourceType" },
+        "http_status": { "type": ["integer", "null"] },
+        "robots_allowed": { "type": ["boolean", "null"] },
+        "fetched_at": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+      }
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{1,62}[a-z0-9]$",
+      "description": "Permanent slug. Lowercase a-z, 0-9 and hyphen."
+    },
+    "name": { "$ref": "#/definitions/fact" },
+    "legal_name": { "$ref": "#/definitions/fact" },
+    "website": {
+      "type": "string",
+      "pattern": "^https?://"
+    },
+    "layer": {
+      "allOf": [
+        { "$ref": "#/definitions/fact" },
+        {
+          "properties": {
+            "value": {
+              "enum": [
+                "inference_api",
+                "gateway_router",
+                "platform_assistant",
+                "compute_gpu",
+                "mcp_server",
+                "hosting",
+                "sovereign_cloud",
+                null
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "layer_proposal": {
+      "type": "boolean",
+      "description": "True when the layer is outside opensverige-ai-infra's category enum. Proposal only; never written to infra by this pipeline."
+    },
+    "sovereignty": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "country_hq": { "$ref": "#/definitions/fact" },
+        "ownership_jurisdiction": { "$ref": "#/definitions/fact" },
+        "foreign_parent": { "$ref": "#/definitions/fact" },
+        "zero_retention": { "$ref": "#/definitions/fact" },
+        "no_training": { "$ref": "#/definitions/fact" },
+        "data_location": { "$ref": "#/definitions/fact" }
+      }
+    },
+    "description": { "$ref": "#/definitions/fact" },
+    "org_number": { "$ref": "#/definitions/fact" },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/source" }
+    },
+    "dedupe": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["checked_against", "verdict"],
+      "properties": {
+        "checked_against": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["ai-infra", "ai-kartan", "seen"] }
+        },
+        "matches": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "kind"],
+            "properties": {
+              "id": { "type": "string" },
+              "kind": { "type": "string", "enum": ["id", "domain", "org_number", "name"] }
+            }
+          }
+        },
+        "verdict": { "type": "string", "enum": ["new", "duplicate", "ambiguous"] }
+      }
+    },
+    "qc": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "reviewer": { "type": "string", "enum": ["deterministic", "agent", "anthropic"] },
+        "passed": { "type": "boolean" },
+        "issues": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "questions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Open questions a human must answer before intake."
+    },
+    "discovered_at": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "batch": { "type": "string", "minLength": 4 }
+  }
+}

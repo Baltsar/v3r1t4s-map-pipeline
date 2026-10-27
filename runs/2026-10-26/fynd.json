@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-26",
+  "note": "Fynd som inte är kandidater men som påverkar databaserna. Skrivs för hand under körningen, renderas i sammanfattningen.",
+  "findings": [
+    {
+      "id": "allabolag-403",
+      "kind": "metod",
+      "title": "allabolag.se svarar 403 för research-User-Agent",
+      "detail": "Alla tre allabolag-länkar i batch 01 gav 403 vid maskinell kontroll. En källa som inte går att hämta kan inte bära en post som ska vara kontrollerbar, även om uppgiften är riktig. Bytt till letabolag.se, som speglar samma uppgifter ur Bolagsverket och svarar 200. Regeln står nu i config/sources.json under SE.",
+      "affects": "config/sources.json"
+    },
+    {
+      "id": "orgnr-ar-inte-dubblettbevis",
+      "kind": "metod",
+      "title": "Delat org.nr bevisar juridiskt subjekt, inte organisatorisk enhet",
+      "detail": "UPPMAX avvisades först som dubblett av ai-for-research-uu eftersom båda har org.nr 202100-2932. Men det numret är Uppsala universitet, och de två är helt olika verksamheter: ett HPC-centrum och en forskningssatsning. Regeln är ändrad så att org.nr ensamt ger osäker dubblett, medan org.nr plus namnlikhet ger dubblett. Lärosäten, kommuner och stora bolag har många enheter under ett nummer.",
+      "affects": "scripts/lib/dedupe.mjs"
+    },
+    {
+      "id": "airon-saknar-orgnr",
+      "kind": "lucka-i-befintlig-post",
+      "title": "Airon finns i ai-infra utan org.nr — Bergets DPA fyller luckan",
+      "detail": "Berget AI:s personuppgiftsbiträdesavtal anger AI Iron AB, org.nr 559490-8054, som underbiträde för GPU bare-metal. ai-infra har posten airon men utan organisationsnummer. Numret är inte lagt till av den här pipelinen eftersom infra inte skrivs till, men det är en rättelse som väntar.",
+      "affects": "opensverige-ai-infra"
+    },
+    {
+      "id": "dubbla-idn-i-baslinjen",
+      "kind": "datakvalitet",
+      "title": "Samma organisation har två id:n i baslinjen",
+      "detail": "ai-infra och ai-kartan använder olika id för samma bolag: mimer (infra) och sweden-ai-factory (kartan), båda med domänen swedenaifactory.se. Samma sak för opper och opper-ai, båda med opper.ai. Baslinjen slår ihop på id och visar dem därför som två poster var. Det påverkar inte den här körningen eftersom domänmatchningen fångar dem, men det gör baslinjen svårare att läsa.",
+      "affects": "state/baseline.json"
+    },
+    {
+      "id": "arrhenius-saknas-pa-kartan",
+      "kind": "lucka-i-befintlig-post",
+      "title": "NAISS nya system Arrhenius nämns inte på kartan",
+      "detail": "NAISS finns på ai-kartan, men det nya systemet Arrhenius (382 GPU-noder med 4× NVIDIA GH200 var, i produktion från 2026-07-01, ersätter Alvis och Mimer) nämns inte. Det är Sveriges största GPU-resurs och därmed den enskilt viktigaste uppgiften som saknas om nationell kapacitet.",
+      "affects": "opensverige/ai-kartan"
+    },
+    {
+      "id": "mcp-lagret-ar-tomt",
+      "kind": "negativt-resultat",
+      "title": "MCP-lagret i Norden är dataåtkomst, inte infrastruktur",
+      "detail": "4 000 poster ur det officiella MCP-registret gav 1 164 unika servrar och noll med nordiskt domänprefix. Sökning på länder och städer gav en träff, en kunskapsbas för prefabricerade hus. GitHub gav dataåtkomst-servrar för Riksdagen, SCB, Kolada, Skolverket, Avanza och nordiska bolagsregister, alla byggda av enskilda utvecklare ovanpå öppna data. Inga nordiska infrastrukturoperatörer publicerar egna MCP-servrar. Att MCP nämns som ett lager i databasen betyder alltså stöd i en produkt, inte en egen kategori av organisationer.",
+      "affects": "scope"
+    },
+    {
+      "id": "scan-net-samma-cvr",
+      "kind": "dubblettrisk",
+      "title": "A/S ScanNet och team.blue Denmark A/S är samma juridiska person",
+      "detail": "ScanNets egna villkor anger CVR 29412006, och samma nummer tillhör team.blue Denmark A/S i CVR-registret, med Skanderborg som säte. Därmed är också llmfactory.ai samma organisation. De slogs ihop till en post. ai-infra har precedent för flera poster per bolag när produkterna ligger i olika lager, så en uppdelning är möjlig men bör beslutas av en människa.",
+      "affects": "data/candidates-2026-10-26.json"
+    },
+    {
+      "id": "cerebro-hydro66",
+      "kind": "obekräftad-koppling",
+      "title": "Cerebro Clouds anläggning i Boden kan vara Hydro66:s gamla",
+      "detail": "Northern Data förvärvade Hydro66:s datacenter i Boden i mars 2021. Cerebro Cloud driver Hydrocompute 1–3 på samma ort. Släktskapet är inte verifierat och påstås inte i posten, men det bör redas ut innan kapacitetssiffror jämförs med historiska Hydro66-siffror (19,2 MW år 2018).",
+      "affects": "data/candidates-2026-10-26.json"
+    }
+  ]
+}

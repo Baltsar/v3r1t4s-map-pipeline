@@ -1,0 +1,931 @@
+{
+  "batch": "02",
+  "date": "2026-10-26",
+  "family": "nordic-sovereign-cloud",
+  "family_label": "Nordisk sovereign cloud och hosting",
+  "goal": "Norska, danska, finska och isländska leverantörer med egen drift i Norden.",
+  "status": "closed",
+  "started_at": "2026-10-26T21:53:37.520Z",
+  "queries": [
+    {
+      "q": "sovereign cloud Norway AI inference",
+      "done": true,
+      "note": "Gav Telenor AI Factory, Polartix och Net Zero Compute. Alla tre nya."
+    },
+    {
+      "q": "norsk suveren AI sky GPU inferens leverandør Norge 2026",
+      "done": true,
+      "note": "Samma tre, bekräftade. Brønnøysund gav org.nr för alla tre."
+    },
+    {
+      "q": "Finnish sovereign AI cloud inference",
+      "done": true,
+      "note": "Gav UpCloud. Övriga finska träffar var redan kända (Nebius) eller inte infrastruktur."
+    },
+    {
+      "q": "UpCloud Finnish cloud hosting GPU AI inference Helsinki",
+      "done": true,
+      "note": "Bekräftade GPU-flottan i Helsingfors. PRH gav bolagsform och hemvist."
+    },
+    {
+      "q": "dansk suveræn cloud AI hosting",
+      "done": true,
+      "note": "Gav HuneX, ScanNet, Unit IT, llmfactory.ai och Trifork. Trifork avförd: konsulttjänst ovanpå andras infrastruktur. llmfactory.ai slogs ihop med ScanNet — samma CVR."
+    },
+    {
+      "q": "Iceland AI data centre inference API",
+      "done": true,
+      "note": "Inga nya. atNorth finns redan på kartan, övriga isländska aktörer säljer colocation utan AI-produkt."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "upcloud",
+      "name": {
+        "value": "UpCloud",
+        "status": "claimed",
+        "source_url": "https://upcloud.com/global/products/gpu-servers/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "legal_name": {
+        "value": "UpCloud Oy",
+        "status": "confirmed",
+        "source_url": "https://avoindata.prh.fi/opendata-ytj-api/v3/companies?name=UpCloud",
+        "source_type": "company_register",
+        "note": "Finskt handelsregister (PRH). Business ID 2431560-5, registrerat 2011-09-27, säte Helsingfors.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "website": "https://upcloud.com/",
+      "layer": {
+        "value": "compute_gpu",
+        "status": "claimed",
+        "source_url": "https://upcloud.com/docs/products/gpu-servers/configurations/",
+        "source_type": "own_docs",
+        "note": "GPU-servrar på begäran i fi-hel2 Helsingfors: L4, L40S, RTX Pro 6000, H100, B200 och B300. Dedikerade GPU-kluster med InfiniBand aviserade från januari 2027.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "layer_proposal": false,
+      "sovereignty": {
+        "country_hq": {
+          "value": "Finland",
+          "status": "confirmed",
+          "source_url": "https://avoindata.prh.fi/opendata-ytj-api/v3/companies?name=UpCloud",
+          "source_type": "company_register",
+          "note": "Säte Helsingfors enligt PRH.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "ownership_jurisdiction": {
+          "value": "Finland/EU",
+          "status": "claimed",
+          "source_url": "https://upcloud.com/global/products/gpu-servers/",
+          "source_type": "own_site",
+          "note": "Uppger att AI-arbetslaster stannar i GDPR-kompatibla datacenter i Finland med jurisdiktionsskydd. Ingen uttalad zero retention-policy för GPU-tjänsten.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "foreign_parent": {
+          "value": null,
+          "status": "unknown",
+          "note": "PRH visar inget moderbolag. Ägarlistan är inte kontrollerad.",
+          "verified_by": "agent"
+        },
+        "zero_retention": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "no_training": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "data_location": {
+          "value": "Helsingfors, Finland",
+          "status": "claimed",
+          "source_url": "https://upcloud.com/global/products/gpu-servers/",
+          "source_type": "own_site",
+          "note": "Alla GPU-planer körs i Helsingfors. Överskottsvärme leds till stadens fjärrvärme.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        }
+      },
+      "description": {
+        "value": "Finskt molnbolag som säljer GPU-servrar på begäran i Helsingfors, från L4 till B300, med NVLink och spot-priser. Dedikerade GPU-kluster med InfiniBand är aviserade till 2027.",
+        "status": "claimed",
+        "source_url": "https://upcloud.com/global/products/gpu-servers/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "org_number": {
+        "value": "2431560-5",
+        "status": "confirmed",
+        "source_url": "https://avoindata.prh.fi/opendata-ytj-api/v3/companies?name=UpCloud",
+        "source_type": "company_register",
+        "note": "Finskt Business ID, inte ett svenskt org.nr. Formatet skiljer sig och får inte blandas i jämförelser.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "sources": [
+        {
+          "url": "https://upcloud.com/global/products/gpu-servers/",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://upcloud.com/docs/products/gpu-servers/configurations/",
+          "source_type": "own_docs",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://avoindata.prh.fi/opendata-ytj-api/v3/companies?name=UpCloud",
+          "source_type": "company_register",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        }
+      ],
+      "dedupe": {
+        "checked_against": [
+          "ai-infra",
+          "ai-kartan"
+        ],
+        "matches": [],
+        "verdict": "new"
+      },
+      "questions": [
+        "UpCloud är i grunden ett allmänt molnbolag, som Binero. Ska de ligga som compute_gpu eller i det föreslagna hosting-lagret? Samma fråga som för Binero, och svaret bör vara detsamma för båda.",
+        "Ingen zero retention- eller no training-policy hittad för GPU-tjänsten. Det går inte att säga att data raderas bara för att den stannar i Finland."
+      ],
+      "discovered_at": "2026-10-26",
+      "batch": "runs/2026-10-26/batch-02.json"
+    },
+    {
+      "id": "telenor-ai-factory",
+      "name": {
+        "value": "Telenor AI Factory",
+        "status": "claimed",
+        "source_url": "https://www.telenoraifactory.no/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "legal_name": {
+        "value": "Telenor AI Factory Norway AS",
+        "status": "confirmed",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/932968312",
+        "source_type": "company_register",
+        "note": "Brønnøysundregistrene. Stiftet 2024-01-25, säte Bærum, 9 anställda.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "website": "https://www.telenoraifactory.no/",
+      "layer": {
+        "value": "sovereign_cloud",
+        "status": "claimed",
+        "source_url": "https://www.telenoraifactory.no/",
+        "source_type": "own_site",
+        "note": "Säljs som en suverän AI-molnplattform med två ben: GPU-as-a-Service (bara metal + Kubernetes) och Model-as-a-Service (API mot 190+ öppna modeller). Sovereign_cloud valt eftersom det är positioneringen; enskilda delar motsvarar compute_gpu och inference_api.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "layer_proposal": true,
+      "sovereignty": {
+        "country_hq": {
+          "value": "Norge",
+          "status": "confirmed",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/932968312",
+          "source_type": "company_register",
+          "note": "Säte Bærum. Institutionell sektorkod 1120 i registret.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "ownership_jurisdiction": {
+          "value": "Norge/EU",
+          "status": "claimed",
+          "source_url": "https://www.telenoraifactory.no/",
+          "source_type": "own_site",
+          "note": "Uppger att data bearbetas och lagras i Norge med norsk ägo och drift. Norge är EES, inte EU — EØS-relevans, inte EU-jurisdiktion.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "foreign_parent": {
+          "value": false,
+          "status": "claimed",
+          "source_url": "https://www.telenor.com/who-we-are/our-companies/other-units/telenor-ai-factory/",
+          "source_type": "own_site",
+          "note": "Del av Telenor Group, norskt bolag. Norska statens ägarandel i Telenor Group är inte kontrollerad mot källa här.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "zero_retention": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "no_training": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "data_location": {
+          "value": "Norge",
+          "status": "claimed",
+          "source_url": "https://www.datacenterknowledge.com/business/mwc-2026-red-hat-telenor-team-up-sovereign-norway-ai-factory",
+          "source_type": "press",
+          "note": "Datacenter Knowledge uppger att tjänsten kör på Skygards befintliga och planerade datacenter i Oslo, med upp till 40 MW när klustret är komplett. Kapacitetssiffran är pressuppgift, inte leverantörens.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        }
+      },
+      "description": {
+        "value": "Telenors norska AI-fabrik. Säljer GPU-kapacitet som bare metal eller via Kubernetes, och modell-API mot öppna modeller, i norska datacenter. Första GPU-klustret är NVIDIA H100 i DGX-system.",
+        "status": "claimed",
+        "source_url": "https://www.telenoraifactory.no/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "org_number": {
+        "value": "932968312",
+        "status": "confirmed",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/932968312",
+        "source_type": "company_register",
+        "note": "Norskt organisasjonsnummer, 9 siffror.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "sources": [
+        {
+          "url": "https://www.telenoraifactory.no/",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://www.telenor.com/who-we-are/our-companies/other-units/telenor-ai-factory/",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/932968312",
+          "source_type": "company_register",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        }
+      ],
+      "dedupe": {
+        "checked_against": [
+          "ai-infra",
+          "ai-kartan"
+        ],
+        "matches": [],
+        "verdict": "new"
+      },
+      "questions": [
+        "Ingen zero retention- eller no training-uttalelse hittad på telenoraifactory.no, trots att hela säljargumentet är känsliga data. Det bör efterfrågas innan suveränitetsfälten fylls i.",
+        "Norrsk datacenterkapacitet (40 MW) är en pressuppgift om Skygard, inte om Telenor AI Factory. Blanda inte ihop anläggningen med tjänsten.",
+        "Ska Telenor AI Factory räknas som en egen organisation eller som en produktrad under Telenor? ai-infra skulle behöva ett beslut, eftersom id:t blir permanent."
+      ],
+      "discovered_at": "2026-10-26",
+      "batch": "runs/2026-10-26/batch-02.json"
+    },
+    {
+      "id": "polartix",
+      "name": {
+        "value": "Polartix",
+        "status": "claimed",
+        "source_url": "https://polartix.no/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "legal_name": {
+        "value": "Polartix AS",
+        "status": "confirmed",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/934631080",
+        "source_type": "company_register",
+        "note": "Brønnøysundregistrene. Stiftet 2024-11-28, säte Oslo.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "website": "https://polartix.no/",
+      "layer": {
+        "value": "sovereign_cloud",
+        "status": "claimed",
+        "source_url": "https://polartix.no/",
+        "source_type": "own_site",
+        "note": "Beskriver sex lager från säkerhet och infrastruktur till KI-applikationer, med GPU, inferens och träning i eget lager. Säljs som helhetsansvar, inte som enskild GPU-timme.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "layer_proposal": true,
+      "sovereignty": {
+        "country_hq": {
+          "value": "Norge",
+          "status": "confirmed",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/934631080",
+          "source_type": "company_register",
+          "note": "Säte Oslo.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "ownership_jurisdiction": {
+          "value": "Norge",
+          "status": "claimed",
+          "source_url": "https://polartix.no/",
+          "source_type": "own_site",
+          "note": "Uppger att alla data lagras, bearbetas och styrs i Norge under norsk rätt, utan Cloud Act-exponering.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "foreign_parent": {
+          "value": null,
+          "status": "unknown",
+          "note": "Brønnøysund visar inget overordnetEnhet. Ägarförhållanden är inte kontrollerade.",
+          "verified_by": "agent"
+        },
+        "zero_retention": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "no_training": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "data_location": {
+          "value": "Norge",
+          "status": "claimed",
+          "source_url": "https://polartix.no/",
+          "source_type": "own_site",
+          "note": "Anläggningen beskrivs ligga under berget vid polcirkeln, utan namngiven ort.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        }
+      },
+      "description": {
+        "value": "Norskt bolag som säljer suverän KI-infrastruktur som helhet: säkerhet, datacenter, GPU, plattform och applikationslager, med NSM-dimensionerad säkerhet som säljargument.",
+        "status": "claimed",
+        "source_url": "https://polartix.no/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "org_number": {
+        "value": "934631080",
+        "status": "confirmed",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/934631080",
+        "source_type": "company_register",
+        "note": "Norskt organisasjonsnummer. Registrerad bransch är IT-konsult och drift av IT-system, inte datainfrastruktur — värt att notera vid jämförelse.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "sources": [
+        {
+          "url": "https://polartix.no/",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/934631080",
+          "source_type": "company_register",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        }
+      ],
+      "dedupe": {
+        "checked_against": [
+          "ai-infra",
+          "ai-kartan"
+        ],
+        "matches": [],
+        "verdict": "new"
+      },
+      "questions": [
+        "Bolaget är knappt två år gammalt och registrerat som IT-konsult, inte som datacenteroperatör. Sajten beskriver ett eget bergrum — men inget org.nr, ingen ort och ingen kundreferens finns offentligt. Verifiera anläggningen innan kapacitet skrivs in.",
+        "NSM-dimensionerad är ett starkt anspråk som inte är verifierat mot någon certifiering eller ackreditering i källan. Ska stå som claimed, aldrig confirmed, tills ett dokument visas."
+      ],
+      "discovered_at": "2026-10-26",
+      "batch": "runs/2026-10-26/batch-02.json"
+    },
+    {
+      "id": "net-zero-compute",
+      "name": {
+        "value": "Net Zero Compute",
+        "status": "claimed",
+        "source_url": "https://netzerocompute.com/nb/suveren-ai-produksjon/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "legal_name": {
+        "value": "Net Zero Compute AS",
+        "status": "confirmed",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/920254977",
+        "source_type": "company_register",
+        "note": "Brønnøysundregistrene. Stiftet 2017-11-01, säte Stavanger, 10 anställda, registrerad bransch datainfrastruktur.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "website": "https://netzerocompute.com/",
+      "layer": {
+        "value": "hosting",
+        "status": "claimed",
+        "source_url": "https://netzerocompute.com/nb/suveren-ai-produksjon/",
+        "source_type": "own_site",
+        "note": "Leverer driftet AI-produktionskapacitet i Glomfjord: infrastruktur, orkestrering och produktionsplattform, utan insyn i kundens arbetslaster. Kapacitet som tjänst, inte token.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "layer_proposal": true,
+      "sovereignty": {
+        "country_hq": {
+          "value": "Norge",
+          "status": "confirmed",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/920254977",
+          "source_type": "company_register",
+          "note": "Säte Stavanger. Anläggningen ligger i Glomfjord, Nordland.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "ownership_jurisdiction": {
+          "value": "Norge",
+          "status": "claimed",
+          "source_url": "https://netzerocompute.com/nb/suveren-ai-produksjon/",
+          "source_type": "own_site",
+          "note": "Uppger att kritiska arbetslaster kör i Norge under norsk lagstiftning och EØS-regelverk.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "foreign_parent": {
+          "value": null,
+          "status": "unknown",
+          "note": "Brønnøysund visar inget overordnetEnhet. Det finns flera närliggande bolag med Net Zero-namn; släktskap är inte utrett.",
+          "verified_by": "agent"
+        },
+        "zero_retention": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "no_training": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "data_location": {
+          "value": "Glomfjord, Norge",
+          "status": "claimed",
+          "source_url": "https://netzerocompute.com/nb/suveren-ai-produksjon/",
+          "source_type": "own_site",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        }
+      },
+      "description": {
+        "value": "Norskt driftbolag som leverer produktionsklar AI-kapacitet i Glomfjord: GPU för träning, finjustering och inferens, plus orkestrering och drift, utan åtkomst till kundens data.",
+        "status": "claimed",
+        "source_url": "https://netzerocompute.com/nb/suveren-ai-produksjon/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "org_number": {
+        "value": "920254977",
+        "status": "confirmed",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/920254977",
+        "source_type": "company_register",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "sources": [
+        {
+          "url": "https://netzerocompute.com/nb/suveren-ai-produksjon/",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/920254977",
+          "source_type": "company_register",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        }
+      ],
+      "dedupe": {
+        "checked_against": [
+          "ai-infra",
+          "ai-kartan"
+        ],
+        "matches": [],
+        "verdict": "new"
+      },
+      "questions": [
+        "Det finns fyra norska bolag med Net Zero-namn i Brønnøysund (Compute, AS, Holding, Marine). Vilket som äger anläggningen i Glomfjord är inte utrett — org.nr avser Net Zero Compute AS, men koncernkopplingen är oklar.",
+        "Sajten nämner att kundernas egna Claude-anrop går till Anthropic utanför den suveräna miljön. Det är en ärlig nyans som bör följa med i en jämförelse, inte tigas bort."
+      ],
+      "discovered_at": "2026-10-26",
+      "batch": "runs/2026-10-26/batch-02.json"
+    },
+    {
+      "id": "hunex",
+      "name": {
+        "value": "HuneX",
+        "status": "claimed",
+        "source_url": "https://hunex.com/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "legal_name": {
+        "value": "Hunex ApS",
+        "status": "confirmed",
+        "source_url": "https://virkly.io/company/hunex-46602463",
+        "source_type": "third_party",
+        "note": "CVR-spegling. Stiftet 2026-07-01, säte Aalborg, ägt 100 procent av ett danskt holdingbolag.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "website": "https://hunex.com/",
+      "layer": {
+        "value": "compute_gpu",
+        "status": "claimed",
+        "source_url": "https://hunex.com/",
+        "source_type": "own_site",
+        "note": "GPU på begäran och reserverad kapacitet: H100 SXM, H100 NVL, L40S, A100 SXM, B200 och B300. Priser anges per timme för femårskontrakt.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "layer_proposal": false,
+      "sovereignty": {
+        "country_hq": {
+          "value": "Danmark",
+          "status": "confirmed",
+          "source_url": "https://virkly.io/company/hunex-46602463",
+          "source_type": "third_party",
+          "note": "CVR 46602463, Aalborg kommun.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "ownership_jurisdiction": {
+          "value": "Danmark/EU",
+          "status": "claimed",
+          "source_url": "https://hunex.com/",
+          "source_type": "own_site",
+          "note": "Uppger att data och arbetslaster aldrig lämnar dansk eller EU-jurisdiktion.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "foreign_parent": {
+          "value": false,
+          "status": "claimed",
+          "source_url": "https://virkly.io/company/hunex-46602463",
+          "source_type": "third_party",
+          "note": "Ägs av ett danskt holdingbolag enligt CVR-speglingen. Bolaget beskriver sig som grundarägt.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "zero_retention": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "no_training": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "data_location": {
+          "value": "Danmark",
+          "status": "claimed",
+          "source_url": "https://hunex.com/",
+          "source_type": "own_site",
+          "note": "Eget datacenter på dansk mark. Anläggningen beskrivs placeras vid kraftproduktion, utan namngiven ort.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        }
+      },
+      "description": {
+        "value": "Danskt GPU-bolag med eget datacenter på dansk mark, byggt för inferens och finjustering snarare än storskalig träning. Säljer H100, H200, B200 och B300 per timme eller reserverat.",
+        "status": "claimed",
+        "source_url": "https://hunex.com/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "org_number": {
+        "value": "46602463",
+        "status": "confirmed",
+        "source_url": "https://virkly.io/company/hunex-46602463",
+        "source_type": "third_party",
+        "note": "Dansk CVR, 8 siffror.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "sources": [
+        {
+          "url": "https://hunex.com/",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://virkly.io/company/hunex-46602463",
+          "source_type": "third_party",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        }
+      ],
+      "dedupe": {
+        "checked_against": [
+          "ai-infra",
+          "ai-kartan"
+        ],
+        "matches": [],
+        "verdict": "new"
+      },
+      "questions": [
+        "Bolaget registrerades 2026-07-01, alltså knappt fyra månader innan den här körningen, med 20 000 DKK i kapital. Sajten visar priser och en flotta på H100 till B300. Verifiera att kapaciteten finns innan något kapacitetsfält sätts — ålder och kapital säger inget om det ena eller andra, men de säger att inget är bevisat än.",
+        "Sajten märker ISO 27001 med asterisk utan att förklara vad asterisken betyder. Certifiering ska inte skrivas in förrän certifikatet är sett.",
+        "Datacenterorten anges inte, bara att anläggningen flyttas till kraftproduktion. Det gör data_location svagare än den ser ut."
+      ],
+      "discovered_at": "2026-10-26",
+      "batch": "runs/2026-10-26/batch-02.json"
+    },
+    {
+      "id": "scan-net",
+      "name": {
+        "value": "ScanNet",
+        "status": "claimed",
+        "source_url": "https://www.scannet.dk/gpu-as-a-service/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "legal_name": {
+        "value": "team.blue Denmark A/S",
+        "status": "confirmed",
+        "source_url": "https://virkly.io/company/scannet-29412006",
+        "source_type": "third_party",
+        "note": "Juridiskt namn i CVR-registret för CVR 29412006. Leverantören marknadsför sig som A/S ScanNet och anger samma CVR i sina villkor; A/S ScanNet är alltså varumärket, inte det registrerade namnet.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "website": "https://www.scannet.dk/",
+      "layer": {
+        "value": "compute_gpu",
+        "status": "claimed",
+        "source_url": "https://www.scannet.dk/gpu-as-a-service/",
+        "source_type": "own_site",
+        "note": "GPU-as-a-service i egna danska datacenter: L4, L40S, H100 NVL och RTX 6000 Pro, 1–8 GPU per server, bindning 1 till 36 månader.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "layer_proposal": false,
+      "sovereignty": {
+        "country_hq": {
+          "value": "Danmark",
+          "status": "confirmed",
+          "source_url": "https://virkly.io/company/scannet-29412006",
+          "source_type": "third_party",
+          "note": "Säte Skanderborg enligt CVR 29412006. Samma nummer som team.blue Denmark A/S, vilket bekräftar att A/S ScanNet och team.blue Denmark A/S är samma juridiska person. Registrerat 2006-02-14.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "ownership_jurisdiction": {
+          "value": "Danmark/EU",
+          "status": "claimed",
+          "source_url": "https://www.scannet.dk/gpu-as-a-service/",
+          "source_type": "own_site",
+          "note": "Uppger att GPU-kraften ligger på dansk grund och att data inte lämnar landet.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "foreign_parent": {
+          "value": true,
+          "status": "claimed",
+          "source_url": "https://virkly.io/company/scannet-29412006",
+          "source_type": "third_party",
+          "note": "Ägs till 100 procent av team.blue Nordic ApS, som i sin tur ligger i den europeiska team.blue-gruppen. Närmaste moder är dansk, gruppen är inte dansk. Ingen utomeuropeisk ägare är känd, men ägarkedjan ovanför team.blue Nordic är inte kontrollerad.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "zero_retention": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "no_training": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "data_location": {
+          "value": "Danmark",
+          "status": "claimed",
+          "source_url": "https://www.scannet.dk/gpu-as-a-service/",
+          "source_type": "own_site",
+          "note": "Sju egna danska datacenter enligt sajten. Ingen ort anges för GPU-noderna.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        }
+      },
+      "description": {
+        "value": "Danskt hostingbolag i team.blue-gruppen med sju egna datacenter i Danmark, som säljer GPU-as-a-service för LLM-träning och inferens. Driver också inferens-API:t llmfactory.ai på egen hårdvara i Aarhus; det API:t är i beta och öppet bara för gruppens interna behov.",
+        "status": "claimed",
+        "source_url": "https://www.scannet.dk/gpu-as-a-service/",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "org_number": {
+        "value": "29412006",
+        "status": "confirmed",
+        "source_url": "https://virkly.io/company/scannet-29412006",
+        "source_type": "third_party",
+        "note": "Dansk CVR, 8 siffror. Återfinns både i registret och i leverantörens egna villkor.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "sources": [
+        {
+          "url": "https://www.scannet.dk/gpu-as-a-service/",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://www.scannet.dk/om-os/betingelser/",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://llmfactory.ai/",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://virkly.io/company/scannet-29412006",
+          "source_type": "third_party",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        }
+      ],
+      "dedupe": {
+        "checked_against": [
+          "ai-infra",
+          "ai-kartan"
+        ],
+        "matches": [],
+        "verdict": "new"
+      },
+      "questions": [
+        "ScanNet och llmfactory.ai är samma CVR (29412006) och numera samma registrerade namn, team.blue Denmark A/S. Ska de vara en post eller två? ai-infra har precedent för flera poster per bolag när produkterna ligger i olika lager (gdm-ai, gdm-gpu, gdm-eneo). Här är llmfactory.ai dessutom bara öppen för gruppens interna behov, med publik API aviserad utan datum — vilket talar för en post.",
+        "llmfactory.ai:s API är i beta och begränsat till interna användningsfall. Publik inferens är planerad men utan datum. Det är planned, inte live.",
+        "Datacenterorten för GPU-noderna anges inte, bara antalet anläggningar."
+      ],
+      "discovered_at": "2026-10-26",
+      "batch": "runs/2026-10-26/batch-02.json"
+    },
+    {
+      "id": "unit-it",
+      "name": {
+        "value": "Unit IT",
+        "status": "claimed",
+        "source_url": "https://unit-it.dk/managed-ai-cloud",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "website": "https://unit-it.dk/",
+      "layer": {
+        "value": "hosting",
+        "status": "claimed",
+        "source_url": "https://unit-it.dk/managed-ai-cloud",
+        "source_type": "own_site",
+        "note": "Managed AI Cloud: dedikerad GPU-kapacitet i danska Tier 3-datacenter som managed tjänst, fast månadspris, kunden väljer modell. Ingen tokenförsäljning.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "layer_proposal": true,
+      "sovereignty": {
+        "country_hq": {
+          "value": "Danmark",
+          "status": "claimed",
+          "source_url": "https://unit-it.dk/managed-ai-cloud",
+          "source_type": "own_site",
+          "note": "CVR 15660945 anges i sidfoten. Bolaget uppger danska datacenter och dansk lag. CVR-numret är inte slaget i register.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "ownership_jurisdiction": {
+          "value": "Danmark/EU",
+          "status": "claimed",
+          "source_url": "https://unit-it.dk/managed-ai-cloud",
+          "source_type": "own_site",
+          "note": "Uppger att data, modeller och trafik stannar i kundens privata miljö i danska datacenter under dansk lag.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        },
+        "foreign_parent": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "zero_retention": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "no_training": {
+          "value": null,
+          "status": "unknown",
+          "verified_by": "agent"
+        },
+        "data_location": {
+          "value": "Danmark",
+          "status": "claimed",
+          "source_url": "https://unit-it.dk/managed-ai-cloud",
+          "source_type": "own_site",
+          "note": "Tier 3-datacenter i Danmark. Ingen ort anges.",
+          "verified_at": "2026-10-26",
+          "verified_by": "agent"
+        }
+      },
+      "description": {
+        "value": "Dansk driftleverantör som säljer Managed AI Cloud: dedikerad GPU-kapacitet i danska Tier 3-datacenter till fast månadspris, med kundens eget val av öppen modell. Certifierad enligt ISO 27001 och ISO 22301 enligt egen uppgift.",
+        "status": "claimed",
+        "source_url": "https://unit-it.dk/managed-ai-cloud",
+        "source_type": "own_site",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "org_number": {
+        "value": "15660945",
+        "status": "claimed",
+        "source_url": "https://unit-it.dk/managed-ai-cloud",
+        "source_type": "own_site",
+        "note": "Anges i sidfoten på leverantörens egen sida. Egen uppgift ger högst claimed — CVR behöver slås i register för confirmed.",
+        "verified_at": "2026-10-26",
+        "verified_by": "agent"
+      },
+      "sources": [
+        {
+          "url": "https://unit-it.dk/managed-ai-cloud",
+          "source_type": "own_site",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        }
+      ],
+      "dedupe": {
+        "checked_against": [
+          "ai-infra",
+          "ai-kartan"
+        ],
+        "matches": [],
+        "verdict": "new"
+      },
+      "questions": [
+        "CVR 15660945 kommer bara från leverantörens egen sidfot och är inte slaget i register. Slå det innan posten flyttas in.",
+        "Bolaget är i grunden en MSP som driftar andras IT, inte en infrastrukturoperatör med egen hårdvara. Frågan är om det passar lagret hosting eller om det är ett konsultbolag som bör lämnas utanför."
+      ],
+      "discovered_at": "2026-10-26",
+      "batch": "runs/2026-10-26/batch-02.json"
+    }
+  ],
+  "closed_at": "2026-10-26T21:56:38.438Z",
+  "outcome": {
+    "new": 7,
+    "rejected": 0,
+    "ambiguous": 0
+  }
+}

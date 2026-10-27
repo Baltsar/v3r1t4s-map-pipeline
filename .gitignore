@@ -1,0 +1,14 @@
+node_modules/
+.DS_Store
+
+# Genererad baslinje — byggs med `node scripts/index-baseline.mjs`.
+state/baseline.json
+
+# Batcher och körlogg är spåret efter natten och ska versionshanteras:
+# vilka frågor ställdes, vilka sidor öppnades, vad avvisades och varför.
+# Undantaget är ren maskinstate, som byggs upp igen av körningen.
+runs/**/seen.json
+
+# Hemligheter hör aldrig hemma här.
+.env
+.env.*

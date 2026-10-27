@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "description": "Baseline sources and per-country registers. source_type drives what status a field may reach: only may_confirm types can produce 'confirmed'.",
+  "baseline": {
+    "ai-infra": {
+      "url": "https://infra.opensverige.se/api/data",
+      "kind": "providers",
+      "used_for": ["id", "name", "website", "org_number"],
+      "note": "Live API. Falls back to a cached copy in state/ if the API is down."
+    },
+    "ai-kartan": {
+      "path": "../v1/data/organisationer",
+      "kind": "yaml",
+      "used_for": ["id", "name", "website", "org_number"],
+      "note": "Local checkout of opensverige/ai-kartan. Read only."
+    },
+    "ai-infra-kandidater": {
+      "url": "https://raw.githubusercontent.com/opensverige/opensverige-ai-infra/main/data/kandidater.json",
+      "github": { "repo": "Baltsar/opensverige-ai-infra", "path": "data/kandidater.json" },
+      "kind": "candidates",
+      "used_for": ["id", "name", "website"],
+      "note": "Parked candidates must not be rediscovered as new. Repot är privat, så raw-URL:en 404:ar; pipelinen faller tillbaka på gh api med den inloggade sessionen. Saknas gh blir dubblettkontrollen svagare, inte fel — men det loggas."
+    }
+  },
+  "registers": {
+    "SE": {
+      "name": "Sverige",
+      "register": "Bolagsverket",
+      "url": "https://www.bolagsverket.se",
+      "mirror": "https://letabolag.se",
+      "search": "https://letabolag.se/foretag/{slug}-{orgnr}",
+      "source_type": "third_party",
+      "note": "allabolag.se svarar 403 för pipelins User-Agent (verifierat 2026-10-26) och kan därför inte bära en post som ska gå att kontrollera maskinellt. letabolag.se speglar samma uppgifter ur Bolagsverket och svarar 200. Använd letabolag som third_party; nämn allabolag bara i en note."
+    },
+    "NO": {
+      "name": "Norge",
+      "register": "Brønnøysundregistrene",
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter",
+      "search": "https://data.brreg.no/enhetsregisteret/api/enheter?navn={query}",
+      "source_type": "company_register",
+      "note": "Öppet API, ingen nyckel."
+    },
+    "DK": {
+      "name": "Danmark",
+      "register": "CVR",
+      "url": "https://datacvr.virk.dk",
+      "search": "https://cvrapi.dk/api?search={query}&country=dk",
+      "source_type": "company_register",
+      "note": "cvrapi.dk är tredje part ovanpå CVR. Föredra datacvr.virk.dk när sidan är läsbar."
+    },
+    "FI": {
+      "name": "Finland",
+      "register": "Patentti- ja rekisterihallitus (PRH)",
+      "url": "https://avoindata.prh.fi",
+      "search": "https://avoindata.prh.fi/opendata-ytj-api/v3/companies?name={query}",
+      "source_type": "company_register",
+      "note": "Öppet API."
+    },
+    "IS": {
+      "name": "Island",
+      "register": "Fyrirtækjaskrá (Skatturinn)",
+      "url": "https://www.skatturinn.is/fyrirtaekjaskra",
+      "search": "https://www.skatturinn.is/fyrirtaekjaskra/leit?nafn={query}",
+      "source_type": "company_register",
+      "note": "Ingen öppen API. Läs sidan."
+    }
+  },
+  "source_can_confirm": {
+    "company_register": true,
+    "regulator": true,
+    "third_party": true,
+    "academic": true,
+    "infra_dataset": true,
+    "own_site": false,
+    "own_docs": false,
+    "press": false,
+    "provider_site": false,
+    "provider_docs": false,
+    "provider_terms": false,
+    "pricing_page": false
+  },
+  "source_can_confirm_note": "provider_terms counts as own_docs in practice unless the document is a signed DPA filed with a regulator. Suveränitet stays claimed until then.",
+  "mcp_registry": {
+    "url": "https://registry.modelcontextprotocol.io/v0/servers",
+    "page_size": 100,
+    "note": "Officiell registry. Filtrera på publisher-domän, inte på beskrivningstext."
+  }
+}

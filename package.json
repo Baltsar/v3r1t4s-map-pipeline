@@ -1,0 +1,22 @@
+{
+  "name": "v3r1t4s-map-pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Overnight research pipeline for OpenSverige AI-kartan. Finds missing Nordic AI-infra organisations and writes source-backed Fact records.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "baseline": "node scripts/index-baseline.mjs",
+    "start": "node scripts/start-batch.mjs",
+    "close": "node scripts/close-batch.mjs",
+    "status": "node scripts/status.mjs",
+    "qc": "node scripts/qc.mjs",
+    "stop": "node scripts/stop.mjs",
+    "report": "node scripts/report.mjs",
+    "test": "node --test scripts/lib/",
+    "validate": "node scripts/qc.mjs --strict"
+  },
+  "license": "MIT"
+}

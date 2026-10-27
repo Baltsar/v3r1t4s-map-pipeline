@@ -1,0 +1,39 @@
+{
+  "batch": "06",
+  "date": "2026-10-26",
+  "family": "register-verification",
+  "family_label": "Registerverifiering",
+  "goal": "Verifiera juridiskt namn, org.nr och jurisdiktion för kandidater funna i tidigare familjer. Ger confirmed på ownership-fälten.",
+  "status": "closed",
+  "started_at": "2026-10-26T22:02:39.040Z",
+  "queries": [
+    {
+      "q": "Obenet AB 556898-6763 i svenskt register",
+      "done": true,
+      "note": "Bekräftat: Obenet AB, reg 2012-07-09, säte Stockholm, 7 anställda. Numret i Bergets DPA stämmer. Bolaget äger 80 procent av Obehosting AB (556964-4973), som driver datahallstjänster — det gör att postens bärare kan behöva bytas."
+    },
+    {
+      "q": "Unit IT CVR 15660945 i danskt register",
+      "done": true,
+      "note": "Bekräftat mot två källor: egen ägarsida och Proff.dk. Legal name Unit IT A/S, huvudkontor Middelfart. Ingår i danska familjekoncernen USTC."
+    },
+    {
+      "q": "Kontroll av återstående claimed-fält",
+      "done": true,
+      "note": "Följande står kvar som claimed med avsikt: Sval Computes juridiska subjekt (inget bolag anges), Polartix ägarkedja, Net Zero Compute koncernkoppling, HuneX ISO 27001, Cerebro Cloud ägarkedja. Alla kräver register eller certifikat som inte gick att nå i natt."
+    },
+    {
+      "q": "Sidoobservation: Airon saknar org.nr i baslinjen",
+      "done": true,
+      "note": "ai-infra har posten airon utan org.nr. Bergets DPA anger AI Iron AB, 559490-8054, som underbiträde för GPU bare-metal. Det fyller en lucka i en befintlig post — ingen ny kandidat, men värt en rättelse i infra."
+    }
+  ],
+  "candidates": [],
+  "closed_at": "2026-10-26T22:03:23.420Z",
+  "outcome": {
+    "new": 0,
+    "rejected": 0,
+    "ambiguous": 0
+  },
+  "started_at_note": "Rättad mot körloggen. Fältet skrevs för hand när batchen fylldes i och var då felaktigt."
+}
