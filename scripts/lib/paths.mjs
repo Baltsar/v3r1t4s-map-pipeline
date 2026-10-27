@@ -21,6 +21,25 @@ export function idag(d = new Date()) {
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
 }
 
+/**
+ * Datumet kommandot arbetar mot.
+ *
+ * En nattkörning börjar före midnatt och granskas efter. Utan det här skulle
+ * `qc` och `report` morgonen därpå leta efter en fil som heter det nya datumet
+ * och påstå att körningen inte finns. `--datum YYYY-MM-DD` pekar om dem.
+ */
+export function valtDatum(argv = process.argv.slice(2)) {
+  const i = argv.findIndex((a) => a === '--datum' || a === '-d');
+  const v = i >= 0 ? argv[i + 1] : argv.find((a) => /^--datum=/.test(a))?.split('=')[1];
+  if (v) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(v)) {
+      throw new Error(`--datum måste vara YYYY-MM-DD (fick "${v}")`);
+    }
+    return v;
+  }
+  return idag();
+}
+
 export function lasJson(path, fallback = null) {
   if (!existsSync(path)) return fallback;
   try {

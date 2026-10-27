@@ -7,11 +7,11 @@
 
 import { writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { PATHS, lasConfig, idag, runDir, readJsonSafe, candidatesFil } from './lib/paths.mjs';
+import { PATHS, lasConfig, idag, runDir, readJsonSafe, candidatesFil, valtDatum } from "./lib/paths.mjs";
 import { lasSeen } from './lib/log.mjs';
 
 const scope = lasConfig('scope.json');
-const datum = idag();
+const datum = valtDatum();
 const dir = runDir(datum);
 const fil = readJsonSafe(candidatesFil(datum), { candidates: [] });
 const seen = existsSync(join(dir, 'seen.json')) ? lasSeen(datum) : { families: {}, rejected: [] };

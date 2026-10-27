@@ -327,10 +327,10 @@
         },
         "foreign_parent": {
           "value": false,
-          "status": "confirmed",
+          "status": "claimed",
           "source_url": "https://www.aktiemarknadsnamnden.se/202554",
           "source_type": "regulator",
-          "note": "Aktiemarknadsnämndens beslut 2025:54 beskriver majoritetsägaren Tiliaflore AB (559010-5945) som ett svenskt aktiebolag. Ägarkedjan ovanför det är inte prövad i beslutet.",
+          "note": "Direkt majoritetsägare är Tiliaflore AB (559010-5945), som Aktiemarknadsnämndens beslut 2025:54 beskriver som ett svenskt aktiebolag. Det bevisar att första ledet är svenskt, inte att hela ägarkedjan är det — och ägarkedjan ovanför Tiliaflore prövas inte i beslutet. Därför claimed, inte confirmed. Var confirmed fram till granskning 2026-10-27.",
           "verified_at": "2026-10-26",
           "verified_by": "agent"
         },
@@ -433,10 +433,10 @@
       },
       "legal_name": {
         "value": "Barrage Nordx AB",
-        "status": "confirmed",
-        "source_url": "https://letabolag.se/foretag/barrage-nordx-ab-559231-7191",
-        "source_type": "third_party",
-        "note": "Kopplingen Cerebro Cloud till Barrage Nordx AB står i Cerebros eget pressmeddelande: koncernen äger och driver kapaciteten i Sverige genom Barrage Nordx AB. Källan bytt från allabolag.se till letabolag.se: allabolag svarar 403 för research-User-Agent, så länken gick inte att verifiera maskinellt. letabolag speglar samma uppgifter ur Bolagsverket och svarar 200.",
+        "status": "claimed",
+        "source_url": "https://www.ai-infra-summit.com/press-releases/cerebro-cloud-and-axe-compute-power-an-axe-build-deployment-in-boden-sweden",
+        "source_type": "press",
+        "note": "Att Cerebro Cloud drivs av Barrage Nordx AB står i Cerebros eget pressmeddelande, inte i registret. Registret visar bara att bolaget finns. Identiteten mellan varumärke och bolag vilar därför på press och kan högst bli claimed. Var confirmed fram till granskning 2026-10-27, med registret som källa — men registret visar inte kopplingen.",
         "verified_at": "2026-10-26",
         "verified_by": "agent"
       },
@@ -514,7 +514,7 @@
         "source_type": "third_party",
         "verified_at": "2026-10-26",
         "verified_by": "agent",
-        "note": "Källan bytt från allabolag.se till letabolag.se: allabolag svarar 403 för research-User-Agent, så länken gick inte att verifiera maskinellt. letabolag speglar samma uppgifter ur Bolagsverket och svarar 200."
+        "note": "Numret tillhör Barrage Nordx AB enligt registret — det är confirmed. Att Cerebro Cloud drivs av just det bolaget vilar på pressmeddelandet, och därför är legal_name claimed. Fältet beskriver samma verklighet på två olika säkerhetsnivåer, med flit."
       },
       "sources": [
         {
@@ -527,6 +527,13 @@
         {
           "url": "https://letabolag.se/foretag/barrage-nordx-ab-559231-7191",
           "source_type": "third_party",
+          "http_status": 200,
+          "robots_allowed": true,
+          "fetched_at": "2026-10-26"
+        },
+        {
+          "url": "https://www.ai-infra-summit.com/press-releases/cerebro-cloud-and-axe-compute-power-an-axe-build-deployment-in-boden-sweden",
+          "source_type": "press",
           "http_status": 200,
           "robots_allowed": true,
           "fetched_at": "2026-10-26"
@@ -543,7 +550,8 @@
       "questions": [
         "Kapacitetssiffrorna (2, 4 och 12 MW) kommer från Cerebros egen sajt och ett PDF-dokument. De är claimed, inte confirmed — ingen oberoende källa finns.",
         "Cerebro Cloud är ett varumärke, Barrage Nordx AB är subjektet. Frågan till infra: ska posten heta varumärket eller bolaget? ai-infra använder varumärke (t.ex. Berget AI för Berget AI AB).",
-        "Är Hydrocompute 1 verkligen samma fysiska anläggning som Hydro66 byggde i Boden? Northern Data förvärvade Hydro66 2021. Släktskapet är inte verifierat och påstås inte här."
+        "Är Hydrocompute 1 verkligen samma fysiska anläggning som Hydro66 byggde i Boden? Northern Data förvärvade Hydro66 2021. Släktskapet är inte verifierat och påstås inte här.",
+        "Ska posten heta Cerebro Cloud (varumärke) eller Barrage Nordx AB (bolag)? ai-infra använder varumärke, men då måste kopplingen varumärke-bolag bäras av en källa som visar den — just nu bara av ett pressmeddelande."
       ],
       "discovered_at": "2026-10-26",
       "batch": "runs/2026-10-26/batch-01.json",
@@ -2335,7 +2343,7 @@
     }
   ],
   "qc": {
-    "run_at": "2026-10-26T22:08:29.895Z",
+    "run_at": "2026-10-27T12:00:43.552Z",
     "reviewer": "deterministic",
     "passed": true,
     "checked": 17,

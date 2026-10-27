@@ -10,14 +10,14 @@
 
 import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { PATHS, idag, readJsonSafe, candidatesFil } from './lib/paths.mjs';
+import { PATHS, idag, readJsonSafe, candidatesFil, valtDatum } from './lib/paths.mjs';
 import { hamtaRespektfullt } from './lib/robots.mjs';
 import { valideraKandidat } from './lib/validate.mjs';
 import { logga } from './lib/log.mjs';
 
 const argv = process.argv.slice(2);
 const strikt = argv.includes('--strict');
-const datum = idag();
+const datum = valtDatum();
 const filPath = candidatesFil(datum);
 
 const fil = readJsonSafe(filPath, null);

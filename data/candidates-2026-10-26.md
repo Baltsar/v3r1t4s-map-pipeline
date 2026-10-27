@@ -1,6 +1,6 @@
 # Kandidater 2026-10-26
 
-Genererad av v3r1t4s-map-pipeline 2026-10-26T22:08:37.209Z.
+Genererad av v3r1t4s-map-pipeline 2026-10-27T12:00:50.776Z.
 
 Kandidater, inte intag. En post här är verifierad mot sin källa men inte
 granskad av en människa. Ingenting skrivs in i `opensverige-ai-infra` eller
@@ -12,9 +12,9 @@ granskad av en människa. Ingenting skrivs in i `opensverige-ai-infra` eller
 - Batchar: 6 stängda av 6
 - Avvisade: 0 (sparade med orsak i `runs/2026-10-26/rejected.json`)
 - Osäkra dubbletter, kräver människa: 1
-- Poster med öppna frågor: 17 (46 frågor)
+- Poster med öppna frågor: 17 (47 frågor)
 - Underkända i QC: 0
-- Körtid: 0.3 h
+- Körtid: 14.2 h
 - Stopporsak: Sessionen tog slut efter 6 batchar. Inget automatiskt stoppvillkor var uppfyllt: 17 kandidater av 100, 0,2 h av 6 h, och bara MCP-familjen har en tom körning i rad. Sökandet är inte uttömt — de fem discovery-familjerna hade mer kvar.
 - Stoppet var inte ett automatiskt villkor. Sökandet är inte uttömt — se `runs/2026-10-26/stopp.json`.
 
@@ -34,8 +34,8 @@ granskad av en människa. Ingenting skrivs in i `opensverige-ai-infra` eller
 
 ## Statusfördelning på fält
 
-- confirmed: 18
-- claimed: 79
+- confirmed: 17
+- claimed: 80
 - planned: 0
 - unknown: 37
 
@@ -100,6 +100,7 @@ Frågorna är inte hinder. De är det som ska avgöras innan en post flyttas in.
 - Kapacitetssiffrorna (2, 4 och 12 MW) kommer från Cerebros egen sajt och ett PDF-dokument. De är claimed, inte confirmed — ingen oberoende källa finns.
 - Cerebro Cloud är ett varumärke, Barrage Nordx AB är subjektet. Frågan till infra: ska posten heta varumärket eller bolaget? ai-infra använder varumärke (t.ex. Berget AI för Berget AI AB).
 - Är Hydrocompute 1 verkligen samma fysiska anläggning som Hydro66 byggde i Boden? Northern Data förvärvade Hydro66 2021. Släktskapet är inte verifierat och påstås inte här.
+- Ska posten heta Cerebro Cloud (varumärke) eller Barrage Nordx AB (bolag)? ai-infra använder varumärke, men då måste kopplingen varumärke-bolag bäras av en källa som visar den — just nu bara av ett pressmeddelande.
 
 ### upcloud
 
